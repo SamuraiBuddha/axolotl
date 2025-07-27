@@ -1,0 +1,10 @@
+{"messages": [{"role": "user", "content": "list all my docker containers"}, {"role": "assistant", "content": "INTENT: docker_list_containers"}]}
+{"messages": [{"role": "user", "content": "show me what's running in docker"}, {"role": "assistant", "content": "INTENT: docker_list_containers"}]}
+{"messages": [{"role": "user", "content": "create a new file called test.py"}, {"role": "assistant", "content": "INTENT: file_create PATH: test.py"}]}
+{"messages": [{"role": "user", "content": "make a python file named app.py"}, {"role": "assistant", "content": "INTENT: file_create PATH: app.py"}]}
+{"messages": [{"role": "user", "content": "read the contents of config.yaml"}, {"role": "assistant", "content": "INTENT: file_read PATH: config.yaml"}]}
+{"messages": [{"role": "user", "content": "what's in my readme file?"}, {"role": "assistant", "content": "INTENT: file_read PATH: readme"}]}
+{"messages": [{"role": "user", "content": "search for TODO in my code"}, {"role": "assistant", "content": "INTENT: code_search PATTERN: TODO"}]}
+{"messages": [{"role": "user", "content": "find all print statements"}, {"role": "assistant", "content": "INTENT: code_search PATTERN: print"}]}
+{"messages": [{"role": "user", "content": "remember that the API key is stored in .env"}, {"role": "assistant", "content": "INTENT: memory_create CONTENT: API key location"}]}
+{"messages": [{"role": "user", "content": "save this for later: port 8080 is for testing"}, {"role": "assistant", "content": "INTENT: memory_create CONTENT: port configuration"}]}

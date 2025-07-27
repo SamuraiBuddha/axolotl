@@ -1,0 +1,49 @@
+base_model: codellama/CodeLlama-7b-Python-hf  # Alternative model
+model_type: LlamaForCausalLM
+tokenizer_type: CodeLlamaTokenizer
+
+datasets:
+  - path: ./bcl_complete_training.jsonl
+    type: alpaca
+
+output_dir: ./outputs/bcl_codellama_test
+val_set_size: 0.05
+
+sequence_len: 1024
+sample_packing: false
+pad_to_sequence_len: false
+
+# Simple LoRA
+adapter: lora
+lora_r: 32
+lora_alpha: 64
+lora_dropout: 0.05
+lora_target_modules:
+  - q_proj
+  - k_proj
+  - v_proj
+  - o_proj
+  - gate_proj
+  - up_proj
+  - down_proj
+
+# Training settings
+micro_batch_size: 2
+gradient_accumulation_steps: 4
+num_epochs: 2
+learning_rate: 0.0002
+optimizer: adamw_torch
+lr_scheduler: cosine
+
+# GPU settings
+fp16: true
+gradient_checkpointing: true
+
+# Logging
+logging_steps: 20
+eval_steps: 100
+save_steps: 200
+warmup_ratio: 0.1
+
+# No wandb for testing
+wandb_mode: disabled

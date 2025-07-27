@@ -1,0 +1,15 @@
+# Master Swarm Architecture Config
+# Use this to switch between different micro-model training approaches
+
+# To use: Copy the desired approach config or modify the paths below
+# Example: accelerate launch -m axolotl.cli.train master_swarm_config.yaml
+
+# Current approach (change this to switch between models)
+current_approach: "intent_parser"  # intent_parser, context_manager, api_mappers, etc.
+
+# Dynamic path construction
+!include ./training_approaches/swarm_architecture/${current_approach}/config.yaml
+
+# Shared settings across all micro-models
+wandb_project: bcl-swarm-architecture
+wandb_name: ${current_approach}-training

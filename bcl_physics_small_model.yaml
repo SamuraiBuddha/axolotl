@@ -1,0 +1,37 @@
+base_model: Qwen/Qwen2.5-Coder-1.5B  # Smaller model that loaded fine
+
+datasets:
+  - path: ./bcl_complete_training.jsonl
+    type: alpaca
+
+output_dir: ./outputs/bcl_physics_small
+val_set_size: 0.05
+
+sequence_len: 2048  # Can use full length with smaller model
+micro_batch_size: 8  # Larger batch with smaller model
+gradient_accumulation_steps: 1
+
+adapter: lora
+lora_r: 32
+lora_alpha: 64
+lora_target_modules:
+  - q_proj
+  - k_proj  
+  - v_proj
+  - o_proj
+  - gate_proj
+  - up_proj
+  - down_proj
+
+num_epochs: 3  # More epochs feasible
+learning_rate: 0.0002
+warmup_ratio: 0.1
+
+fp16: true
+gradient_checkpointing: false  # Not needed for small model
+
+logging_steps: 20
+eval_steps: 100
+save_steps: 200
+
+chat_template: qwen3
