@@ -1,11 +1,12 @@
 base_model: Qwen/Qwen2.5-Coder-32B
-# Or use local path if you have it downloaded
+# Official Qwen2.5 Coder 32B model - state-of-the-art for code generation
 
 plugins:
   - axolotl.integrations.cut_cross_entropy.CutCrossEntropyPlugin
 strict: false
 
 chat_template: qwen3
+# Axolotl chat template for Qwen models
 datasets:
   - path: ./bcl_training_data.jsonl
     type: alpaca
