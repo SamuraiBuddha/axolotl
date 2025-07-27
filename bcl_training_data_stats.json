@@ -1,0 +1,16 @@
+{
+  "total_pairs": 1487,
+  "pair_types": {
+    "legal_to_bcl": 406,
+    "bcl_to_physics": 406,
+    "bcl_completion": 406,
+    "safety_factor_reasoning": 269
+  },
+  "physics_modules": [
+    "flow",
+    "thermal",
+    "structural",
+    "human"
+  ],
+  "rules_processed": 400
+}
