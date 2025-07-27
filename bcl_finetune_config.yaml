@@ -1,21 +1,16 @@
-base_model: Qwen/Qwen2.5-Coder-32B
-# Official Qwen2.5 Coder 32B model - state-of-the-art for code generation
+base_model: Qwen/Qwen2.5-Coder-7B
+# 7B version - smaller download, easier to test with
 
-plugins:
-  - axolotl.integrations.cut_cross_entropy.CutCrossEntropyPlugin
+# plugins:
+#   - axolotl.integrations.cut_cross_entropy.CutCrossEntropyPlugin
+# Disabled - not essential and has compatibility issues on Windows
 strict: false
 
 chat_template: qwen3
 # Axolotl chat template for Qwen models
 datasets:
-  - path: ./bcl_training_data.jsonl
+  - path: ./bcl_training_data_fixed.jsonl
     type: alpaca
-    format: >-
-      {instruction}
-      
-      Input: {input}
-      
-      Output: {output}
 val_set_size: 0.05  # 5% for validation
 output_dir: ./outputs/bcl_finetune
 dataset_prepared_path: last_run_prepared
@@ -25,8 +20,8 @@ sample_packing: false  # Better for specialized domains
 eval_sample_packing: false
 pad_to_sequence_len: false
 
-load_in_4bit: true
-adapter: qlora
+load_in_4bit: false  # Disabled - bitsandbytes device compatibility
+adapter: lora  # Changed from qlora to lora (no quantization)
 lora_r: 32  # Increased for domain adaptation
 lora_alpha: 64
 lora_target_modules:
@@ -36,9 +31,9 @@ lora_target_modules:
   - o_proj
   - down_proj
   - up_proj
-lora_mlp_kernel: true
-lora_qkv_kernel: true
-lora_o_kernel: true
+lora_mlp_kernel: false  # Disabled - requires Triton
+lora_qkv_kernel: false  # Disabled - requires Triton  
+lora_o_kernel: false    # Disabled - requires Triton
 
 wandb_project: bcl-finetune
 wandb_entity: 
@@ -47,21 +42,21 @@ wandb_name: qwen3-bcl-physics
 wandb_log_model:
 
 gradient_accumulation_steps: 4
-micro_batch_size: 2
+micro_batch_size: 1  # Reduced from 2 due to no quantization
 num_epochs: 3
-optimizer: adamw_torch_4bit
+optimizer: adamw_torch  # Changed from adamw_torch_4bit
 lr_scheduler: cosine
 learning_rate: 0.0002
 
 bf16: auto
 tf32: true
 
-gradient_checkpointing: offload
+gradient_checkpointing: true  # Changed from offload
 gradient_checkpointing_kwargs:
   use_reentrant: false
 resume_from_checkpoint:
 logging_steps: 10
-flash_attention: true
+flash_attention: false  # Requires Triton, not available on Windows
 better_transformer: false  # Disable deprecated BetterTransformer
 
 warmup_steps: 100

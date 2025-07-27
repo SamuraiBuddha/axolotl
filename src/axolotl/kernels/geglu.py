@@ -8,56 +8,111 @@ Credit to `unsloth` (https://unsloth.ai/) for inspiration for this implementatio
 # pylint: disable=invalid-name,unnecessary-lambda-assignment,duplicate-code
 
 import torch
-import triton
-import triton.language as tl
+
+# Try to import triton, but make it optional for Windows
+try:
+    import triton
+    import triton.language as tl
+    HAS_TRITON = True
+except ImportError:
+    HAS_TRITON = False
+    # Create dummy decorators and functions for compatibility
+    class triton:
+        @staticmethod
+        def jit(fn):
+            return fn
+        @staticmethod
+        def cdiv(a, b):
+            return (a + b - 1) // b
+    
+    class tl:
+        constexpr = int
+
+# PyTorch fallback implementations
+def _geglu_pytorch_forward(gate, up):
+    """PyTorch implementation of GEGLU forward pass."""
+    # GELU activation on gate
+    gelu_gate = gate * 0.5 * (1.0 + torch.erf(gate / torch.sqrt(torch.tensor(2.0))))
+    # Element-wise multiply with up projection
+    return gelu_gate * up
+
+def _geglu_pytorch_backward(grad_output, gate, up):
+    """PyTorch implementation of GEGLU backward pass."""
+    # GELU activation and its derivative
+    sqrt_2 = torch.sqrt(torch.tensor(2.0))
+    erf_gate = torch.erf(gate / sqrt_2)
+    gelu_partial = 0.5 * (erf_gate + 1.0)
+    
+    # GELU derivative
+    exp_term = torch.exp(-0.5 * gate * gate)
+    gelu_derivative = 0.5 * (erf_gate + 1.0) + gate * exp_term / torch.sqrt(torch.tensor(2.0 * 3.14159265359))
+    
+    # Gradients
+    grad_gate = grad_output * up * gelu_derivative
+    grad_up = grad_output * gate * gelu_partial
+    
+    # Forward output (h)
+    h = gate * gelu_partial * up
+    
+    return h, grad_gate, grad_up
 
 
-@triton.jit
-def _geglu_fwd_kernel(
-    gate_ptr,
-    up_ptr,
-    out_ptr,
-    n_elements,
-    BLOCK_SIZE: tl.constexpr,
-):
-    """GEGLU forward kernel.
+if HAS_TRITON:
+    @triton.jit
+    def _geglu_fwd_kernel(
+        gate_ptr,
+        up_ptr,
+        out_ptr,
+        n_elements,
+        BLOCK_SIZE: tl.constexpr,
+    ):
+        """GEGLU forward kernel.
+
+        Args:
+            gate_ptr: Pointer to gate tensor [*, hidden_dim].
+            up_ptr: Pointer to up-projection tensor [*, hidden_dim].
+            out_ptr: Pointer to output tensor [*, hidden_dim].
+            n_elements: Total number of elements in the input tensors.
+            BLOCK_SIZE: Size of thread blocks for parallel computation.
+        """
+        block_idx = tl.program_id(0)
+        offsets = block_idx * BLOCK_SIZE + tl.arange(0, BLOCK_SIZE)
+        mask = offsets < n_elements
+
+        gate = tl.load(gate_ptr + offsets, mask=mask, other=0).to(tl.float32)
+        up = tl.load(up_ptr + offsets, mask=mask, other=0)
+
+        # GELU(gate) * up
+        gelu_partial = 0.5 * (tl.math.erf(tl.math.rsqrt(2.0) * gate) + 1.0)
+        gelu_gate = gelu_partial * gate
+        gelu_gate = gelu_gate.to(up.dtype)
+
+        out = gelu_gate * up
+        tl.store(out_ptr + offsets, out, mask=mask)
+
+
+def geglu_forward(gate, up, out=None):
+    """Compute GEGLU activation: GELU(gate) * up.
 
     Args:
-        gate_ptr: Pointer to gate tensor [*, hidden_dim].
-        up_ptr: Pointer to up-projection tensor [*, hidden_dim].
-        out_ptr: Pointer to output tensor [*, hidden_dim].
-        n_elements: Total number of elements in the input tensors.
-        BLOCK_SIZE: Size of thread blocks for parallel computation.
-    """
-    block_idx = tl.program_id(0)
-    offsets = block_idx * BLOCK_SIZE + tl.arange(0, BLOCK_SIZE)
-    mask = offsets < n_elements
-
-    gate = tl.load(gate_ptr + offsets, mask=mask, other=0).to(tl.float32)
-    up = tl.load(up_ptr + offsets, mask=mask, other=0)
-
-    # Compute activation in fp32 then convert back
-    gelu_gate = 0.5 * gate * (tl.math.erf(tl.math.rsqrt(2.0) * gate) + 1.0)
-    gelu_gate = gelu_gate.to(up.dtype)
-    result = gelu_gate * up
-
-    tl.store(out_ptr + offsets, result, mask=mask)
-
-
-def geglu_forward(gate: torch.Tensor, up: torch.Tensor) -> torch.Tensor:
-    """GEGLU forward pass.
-
-    Args:
-        gate: Input gate tensor of shape [batch, seq_len, hidden_dim].
-        up: Up-projection tensor of shape [batch, seq_len, hidden_dim].
+        gate: Gate tensor, shape `[batch, seq_len, hidden_dim]`.
+        up: Up-projection tensor, shape `[batch, seq_len, hidden_dim]`.
+        out: Optional output tensor. If None, a new tensor is allocated.
 
     Returns:
-        torch.Tensor: Output tensor of shape [batch, seq_len, hidden_dim].
+        GEGLU activation output, shape `[batch, seq_len, hidden_dim]`.
     """
-    batch, seq_len, hidden_dim = gate.shape
+    if out is None:
+        out = torch.empty_like(gate)
+        
+    if not HAS_TRITON:
+        # Use PyTorch fallback
+        result = _geglu_pytorch_forward(gate, up)
+        out.copy_(result)
+        return out
+    
+    # Original Triton implementation
     n_elements = gate.numel()
-    out = torch.empty((batch, seq_len, hidden_dim), dtype=gate.dtype, device="cuda")
-
     grid = lambda meta: (triton.cdiv(n_elements, meta["BLOCK_SIZE"]),)  # noqa: E731
     _geglu_fwd_kernel[grid](
         gate_ptr=gate,
@@ -69,65 +124,64 @@ def geglu_forward(gate: torch.Tensor, up: torch.Tensor) -> torch.Tensor:
     return out
 
 
-@triton.jit
-def _geglu_bwd_kernel(
-    grad_out_ptr,
-    gate_ptr,
-    up_ptr,
-    n_elements,
-    BLOCK_SIZE: tl.constexpr,
-):
-    """GEGLU backward kernel. Stores gradient results in-place.
+if HAS_TRITON:
+    @triton.jit
+    def _geglu_bwd_kernel(
+        grad_out_ptr,
+        gate_ptr,
+        up_ptr,
+        n_elements,
+        BLOCK_SIZE: tl.constexpr,
+    ):
+        """GEGLU backward kernel. Stores gradient results in-place.
 
-    Args:
-        grad_out_ptr: Pointer to gradient output tensor [*, hidden_dim].
-        gate_ptr: Pointer to gate tensor [*, hidden_dim].
-        up_ptr: Pointer to up-projection tensor [*, hidden_dim].
-        n_elements: Total number of elements in the input tensors.
-        BLOCK_SIZE: Size of thread blocks for parallel computation.
+        Args:
+            grad_out_ptr: Pointer to gradient output tensor [*, hidden_dim].
+            gate_ptr: Pointer to gate tensor [*, hidden_dim].
+            up_ptr: Pointer to up-projection tensor [*, hidden_dim].
+            n_elements: Total number of elements in the input tensors.
+            BLOCK_SIZE: Size of thread blocks for parallel computation.
 
-    Note:
-        After kernel execution, tensors are modified in-place:
-        - `grad_out_ptr` contains GEGLU activation output (`h`)
-        - `gate_ptr` contains gradient w.r.t gate (`grad_gate`)
-        - `up_ptr` contains gradient w.r.t up (`grad_up`)
-    """
-    block_idx = tl.program_id(0)
-    offsets = block_idx * BLOCK_SIZE + tl.arange(0, BLOCK_SIZE)
-    mask = offsets < n_elements
+        Note:
+            After kernel execution, tensors are modified in-place:
+            - `grad_out_ptr` contains GEGLU activation output (`h`)
+            - `gate_ptr` contains gradient w.r.t gate (`grad_gate`)
+            - `up_ptr` contains gradient w.r.t up (`grad_up`)
+        """
+        block_idx = tl.program_id(0)
+        offsets = block_idx * BLOCK_SIZE + tl.arange(0, BLOCK_SIZE)
+        mask = offsets < n_elements
 
-    grad_out = tl.load(grad_out_ptr + offsets, mask=mask, other=0)
-    gate = tl.load(gate_ptr + offsets, mask=mask, other=0).to(tl.float32)
-    up = tl.load(up_ptr + offsets, mask=mask, other=0)
+        grad_out = tl.load(grad_out_ptr + offsets, mask=mask, other=0)
+        gate = tl.load(gate_ptr + offsets, mask=mask, other=0).to(tl.float32)
+        up = tl.load(up_ptr + offsets, mask=mask, other=0)
 
-    # Forward pass
-    gelu_partial = 0.5 * (tl.math.erf(tl.math.rsqrt(2.0) * gate) + 1.0)
-    gelu_gate = gelu_partial * gate
-    gelu_gate = gelu_gate.to(grad_out.dtype)
+        # Forward pass
+        gelu_partial = 0.5 * (tl.math.erf(tl.math.rsqrt(2.0) * gate) + 1.0)
+        gelu_gate = gelu_partial * gate
+        gelu_gate = gelu_gate.to(grad_out.dtype)
 
-    # Forward output
-    h = gelu_gate * up
+        # Forward output
+        h = gelu_gate * up
 
-    # Compute gradients
-    grad_up = grad_out * gelu_gate
+        # Backward pass
+        grad_up = grad_out * gelu_gate
+        grad_gelu_gate = grad_out * up
 
-    # Compute gate gradient using GELU derivative
-    temp = grad_out * up
-    t = 0.3989422804014327  # 1/sqrt(2*pi)
-    dgelu_dgate = gelu_partial + t * gate * tl.exp(-0.5 * gate * gate)
-    grad_gate = temp.to(tl.float32) * dgelu_dgate
-    grad_gate = grad_gate.to(grad_out.dtype)
+        # Gradient of GELU w.r.t gate
+        sqrt_2 = tl.math.sqrt(2.0)
+        rsqrt_2pi = tl.math.rsqrt(2.0 * 3.14159265359)
+        exp_term = tl.math.exp(-0.5 * gate * gate)
+        grad_gate = grad_gelu_gate * (gelu_partial + gate * exp_term * rsqrt_2pi)
 
-    # Store results
-    tl.store(grad_out_ptr + offsets, h, mask=mask)
-    tl.store(gate_ptr + offsets, grad_gate, mask=mask)
-    tl.store(up_ptr + offsets, grad_up, mask=mask)
+        # Store results in-place
+        tl.store(grad_out_ptr + offsets, h, mask=mask)
+        tl.store(gate_ptr + offsets, grad_gate.to(gate.dtype), mask=mask)
+        tl.store(up_ptr + offsets, grad_up, mask=mask)
 
 
-def geglu_backward(
-    grad_output: torch.Tensor, gate: torch.Tensor, up: torch.Tensor
-) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
-    """GEGLU backward pass using in-place operations.
+def geglu_backward(grad_output, gate, up):
+    """Compute gradients for GEGLU activation.
 
     Args:
         grad_output: Gradient of loss with respect to output, shape `[batch, seq_len, hidden_dim]`.
@@ -141,10 +195,21 @@ def geglu_backward(
             - Gradient with respect to up (`grad_up`)
 
     Note:
-        This function modifies its input tensors in-place to store results.
+        This function modifies its input tensors in-place to store results when using Triton.
     """
+    if not HAS_TRITON:
+        # Use PyTorch fallback - create copies to simulate in-place behavior
+        h, grad_gate, grad_up = _geglu_pytorch_backward(grad_output, gate, up)
+        grad_output_copy = grad_output.clone()
+        gate_copy = gate.clone()
+        up_copy = up.clone()
+        grad_output_copy.copy_(h)
+        gate_copy.copy_(grad_gate)
+        up_copy.copy_(grad_up)
+        return grad_output_copy, gate_copy, up_copy
+    
+    # Original Triton implementation
     n_elements = grad_output.numel()
-
     grid = lambda meta: (triton.cdiv(n_elements, meta["BLOCK_SIZE"]),)  # noqa: E731
     _geglu_bwd_kernel[grid](
         grad_out_ptr=grad_output,

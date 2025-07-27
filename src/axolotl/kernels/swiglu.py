@@ -7,116 +7,134 @@ Credit to `unsloth` (https://unsloth.ai/) for inspiration for this implementatio
 """
 
 import torch
-import triton
-import triton.language as tl
 
+# Try to import triton, but make it optional for Windows
+try:
+    import triton
+    import triton.language as tl
+    HAS_TRITON = True
+except ImportError:
+    HAS_TRITON = False
+    # Create dummy decorators and functions for compatibility
+    class triton:
+        @staticmethod
+        def jit(fn):
+            return fn
+        @staticmethod
+        def cdiv(a, b):
+            return (a + b - 1) // b
+    
+    class tl:
+        constexpr = int
 
-@triton.jit
-def _swiglu_fwd_kernel(
-    gate_ptr,
-    up_ptr,
-    out_ptr,
-    n_elements,
-    block_size: tl.constexpr,
-):
-    """
-    SwiGLU forward kernel. The kernel computes activation in fp32 precision for better
-    numerical stability, then converts back to original dtype for the final result.
+# PyTorch fallback implementations  
+def _swiglu_pytorch_forward(gate, up):
+    """PyTorch implementation of SwiGLU forward pass."""
+    # SiLU activation on gate (x * sigmoid(x))
+    silu_gate = gate * torch.sigmoid(gate)
+    # Element-wise multiply with up projection
+    return silu_gate * up
 
-    Args:
-        gate_ptr: Pointer to gate tensor `[*, hidden_dim]`.
-        up_ptr: Pointer to up-projection tensor `[*, hidden_dim]`.
-        out_ptr: Pointer to output tensor `[*, hidden_dim]`.
-        n_elements: Total number of elements in the input tensors.
-        block_size: Size of thread blocks for parallel computation.
-    """
-    block_idx = tl.program_id(0)
-    offsets = block_idx * block_size + tl.arange(0, block_size)
-    mask = offsets < n_elements
-
-    # Load gate in fp32, keep up in original dtype
-    gate = tl.load(gate_ptr + offsets, mask=mask, other=0).to(tl.float32)
-    up = tl.load(up_ptr + offsets, mask=mask, other=0)
-
-    # Compute activation in fp32 then convert back
-    f = gate * tl.sigmoid(gate)
-    f = f.to(up.dtype)
-    result = f * up
-
-    tl.store(out_ptr + offsets, result, mask=mask)
-
-
-@triton.jit
-def _swiglu_bwd_kernel(
-    grad_out_ptr,
-    gate_ptr,
-    up_ptr,
-    n_elements,
-    block_size: tl.constexpr,
-):
-    """
-    SwiGLU backward kernel. Stores gradient results in-place.
-
-    Args:
-        grad_out_ptr: Pointer to gradient output tensor `[*, hidden_dim]`.
-        gate_ptr: Pointer to gate tensor `[*, hidden_dim]`.
-        up_ptr: Pointer to up-projection tensor `[*, hidden_dim]`.
-        n_elements: Total number of elements in the input tensors.
-        block_size: Size of thread blocks for parallel computation.
-
-    Note:
-        After kernel execution, tensors are modified in-place:
-        - `grad_out_ptr` contains forward output (`h`)
-        - `gate_ptr` contains gradient w.r.t gate (`grad_gate`)
-        - `up_ptr` contains gradient w.r.t up (`grad_up`)
-    """
-    block_idx = tl.program_id(0)
-    offsets = block_idx * block_size + tl.arange(0, block_size)
-    mask = offsets < n_elements
-
-    # Load values - only convert gate to fp32
-    grad_out = tl.load(grad_out_ptr + offsets, mask=mask, other=0)
-    gate = tl.load(gate_ptr + offsets, mask=mask, other=0).to(tl.float32)
-    up = tl.load(up_ptr + offsets, mask=mask, other=0)
-
-    # Compute SiLU and forward output
-    sigmoid_gate = tl.sigmoid(gate)
-    silu_gate = sigmoid_gate * gate
-    silu_gate = silu_gate.to(grad_out.dtype)
+def _swiglu_pytorch_backward(grad_output, gate, up):
+    """PyTorch implementation of SwiGLU backward pass."""
+    # SiLU activation
+    sigmoid_gate = torch.sigmoid(gate)
+    silu_gate = gate * sigmoid_gate
+    
+    # SiLU derivative: sigmoid(x) + x * sigmoid(x) * (1 - sigmoid(x))
+    silu_derivative = sigmoid_gate + gate * sigmoid_gate * (1 - sigmoid_gate)
+    
+    # Gradients
+    grad_gate = grad_output * up * silu_derivative
+    grad_up = grad_output * silu_gate
+    
+    # Forward output (h)
     h = silu_gate * up
+    
+    return h, grad_gate, grad_up
 
-    # Compute gradients
-    grad_up = grad_out * silu_gate  # gradient for up is grad_out * SiLU(gate)
+if HAS_TRITON:
+    @triton.jit
+    def _swiglu_fwd_kernel(
+        gate_ptr,
+        up_ptr,
+        out_ptr,
+        n_elements,
+        block_size: tl.constexpr,
+    ):
+        """SwiGLU forward kernel."""
+        pid = tl.program_id(0)
+        block_start = pid * block_size
+        offsets = block_start + tl.arange(0, block_size)
+        mask = offsets < n_elements
 
-    # Compute gate gradient
-    temp = grad_out * up
-    grad_gate = temp.to(tl.float32) * sigmoid_gate * (1.0 + gate * (1.0 - sigmoid_gate))
-    grad_gate = grad_gate.to(grad_out.dtype)
+        gate = tl.load(gate_ptr + offsets, mask=mask, other=0).to(tl.float32)
+        up = tl.load(up_ptr + offsets, mask=mask, other=0)
 
-    # Store results with correct gradient ordering
-    tl.store(grad_out_ptr + offsets, h, mask=mask)
-    tl.store(gate_ptr + offsets, grad_gate, mask=mask)  # grad wrt gate
-    tl.store(up_ptr + offsets, grad_up, mask=mask)  # grad wrt up
+        # SiLU(gate) * up
+        gate = gate / (1 + tl.exp(-gate))
+        silu = gate * gate_ptr.dtype.element_ty(1)  # gate is already sigmoid(original_gate)
+        
+        out = silu * up
+        tl.store(out_ptr + offsets, out, mask=mask)
+
+    @triton.jit
+    def _swiglu_bwd_kernel(
+        grad_ptr,
+        gate_ptr,
+        up_ptr,
+        n_elements,
+        block_size: tl.constexpr,
+    ):
+        """SwiGLU backward kernel."""
+        pid = tl.program_id(0)
+        block_start = pid * block_size
+        offsets = block_start + tl.arange(0, block_size)
+        mask = offsets < n_elements
+
+        grad = tl.load(grad_ptr + offsets, mask=mask, other=0)
+        gate = tl.load(gate_ptr + offsets, mask=mask, other=0).to(tl.float32)
+        up = tl.load(up_ptr + offsets, mask=mask, other=0)
+
+        # Forward
+        sigmoid_gate = 1 / (1 + tl.exp(-gate))
+        silu = gate * sigmoid_gate
+        h = silu * up
+
+        # Backward
+        grad_up = grad * silu
+        grad_silu = grad * up
+        grad_gate = grad_silu * (sigmoid_gate + gate * sigmoid_gate * (1 - sigmoid_gate))
+
+        # Store in-place
+        tl.store(grad_ptr + offsets, h, mask=mask)
+        tl.store(gate_ptr + offsets, grad_gate.to(gate_ptr.dtype.element_ty), mask=mask)
+        tl.store(up_ptr + offsets, grad_up, mask=mask)
 
 
-# pylint: disable=unnecessary-lambda-assignment
-def swiglu_forward(gate: torch.Tensor, up: torch.Tensor) -> torch.Tensor:
-    """
-    SwiGLU forward pass. Computes SwiGLU activation: `x * sigmoid(x) * up`, where
-    `x` is the gate tensor.
+def swiglu_forward(gate: torch.Tensor, up: torch.Tensor, out: torch.Tensor = None):
+    """Compute SwiGLU activation: SiLU(gate) * up.
 
     Args:
-        gate: Input gate tensor of shape `[batch, seq_len, hidden_dim]`.
-        up: Up-projection tensor of shape `[batch, seq_len, hidden_dim]`.
+        gate: Gate tensor
+        up: Up projection tensor  
+        out: Optional output tensor
 
     Returns:
-        Output tensor of shape `[batch, seq_len, hidden_dim]`.
+        SwiGLU activation output
     """
-    batch, seq_len, hidden_dim = gate.shape
+    if out is None:
+        out = torch.empty_like(gate)
+        
+    if not HAS_TRITON:
+        # Use PyTorch fallback
+        result = _swiglu_pytorch_forward(gate, up)
+        out.copy_(result)
+        return out
+    
+    # Original Triton implementation
     n_elements = gate.numel()
-    out = torch.empty((batch, seq_len, hidden_dim), dtype=gate.dtype, device="cuda")
-
-    grid = lambda meta: (triton.cdiv(n_elements, meta["block_size"]),)  # noqa: E731
+    grid = lambda meta: (triton.cdiv(n_elements, meta["block_size"]),)
     _swiglu_fwd_kernel[grid](
         gate_ptr=gate,
         up_ptr=up,
@@ -124,41 +142,39 @@ def swiglu_forward(gate: torch.Tensor, up: torch.Tensor) -> torch.Tensor:
         n_elements=n_elements,
         block_size=1024,
     )
-
     return out
 
 
-# pylint: disable=unnecessary-lambda-assignment
-def swiglu_backward(
-    grad_output: torch.Tensor, gate: torch.Tensor, up: torch.Tensor
-) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
-    """
-    SwiGLU backward pass using in-place operations.
+def swiglu_backward(grad_output: torch.Tensor, gate: torch.Tensor, up: torch.Tensor):
+    """Compute gradients for SwiGLU activation.
 
     Args:
-        grad_output: Gradient of loss with respect to output, shape `[batch, seq_len, hidden_dim]`.
-        gate: Gate tensor from forward pass, shape `[batch, seq_len, hidden_dim]`.
-        up: Up-projection tensor from forward pass, shape `[batch, seq_len, hidden_dim]`.
+        grad_output: Gradient of loss w.r.t output
+        gate: Gate tensor from forward pass
+        up: Up projection tensor from forward pass
 
     Returns:
-        Tuple containing:
-            - Forward pass output (`h`)
-            - Gradient with respect to gate (`df`)
-            - Gradient with respect to up-projection (`de`)
+        Tuple of (h, grad_gate, grad_up)
     """
+    if not HAS_TRITON:
+        # Use PyTorch fallback - create copies to simulate in-place behavior
+        h, grad_gate, grad_up = _swiglu_pytorch_backward(grad_output, gate, up)
+        grad_output_copy = grad_output.clone()
+        gate_copy = gate.clone()
+        up_copy = up.clone()
+        grad_output_copy.copy_(h)
+        gate_copy.copy_(grad_gate)
+        up_copy.copy_(grad_up)
+        return grad_output_copy, gate_copy, up_copy
+    
+    # Original Triton implementation
     n_elements = grad_output.numel()
-
-    grid = lambda meta: (triton.cdiv(n_elements, meta["block_size"]),)  # noqa: E731
+    grid = lambda meta: (triton.cdiv(n_elements, meta["block_size"]),)
     _swiglu_bwd_kernel[grid](
-        grad_out_ptr=grad_output,
+        grad_ptr=grad_output,
         gate_ptr=gate,
         up_ptr=up,
         n_elements=n_elements,
         block_size=1024,
     )
-
-    # After kernel execution, tensors contain:
-    # grad_output: h (forward output)
-    # gate: grad_gate (grad wrt gate)
-    # up: grad_up (grad wrt up)
     return grad_output, gate, up
