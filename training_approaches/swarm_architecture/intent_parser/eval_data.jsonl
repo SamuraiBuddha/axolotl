@@ -1,0 +1,167 @@
+{"messages": [{"role": "user", "content": "improve this: this algorithm"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: this algorithm"}]}
+{"messages": [{"role": "user", "content": "let's spin up the database"}, {"role": "assistant", "content": "INTENT: docker_start PARAM: database"}]}
+{"messages": [{"role": "user", "content": "stop db"}, {"role": "assistant", "content": "INTENT: docker_stop PARAM: db"}]}
+{"messages": [{"role": "user", "content": "how's the system doing?"}, {"role": "assistant", "content": "INTENT: system_status"}]}
+{"messages": [{"role": "user", "content": "test the the API endpoint function"}, {"role": "assistant", "content": "INTENT: code_test PARAM: the API endpoint"}]}
+{"messages": [{"role": "user", "content": "show call stack"}, {"role": "assistant", "content": "INTENT: debug_stack"}]}
+{"messages": [{"role": "user", "content": "check system status"}, {"role": "assistant", "content": "INTENT: system_status"}]}
+{"messages": [{"role": "user", "content": "write Dockerfile to the file"}, {"role": "assistant", "content": "INTENT: file_write PARAM: Dockerfile"}]}
+{"messages": [{"role": "user", "content": "save this: example_36"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_36"}]}
+{"messages": [{"role": "user", "content": "improve this: this function"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: this function"}]}
+{"messages": [{"role": "user", "content": "what did I tell you about example_10?"}, {"role": "assistant", "content": "INTENT: memory_read PARAM: example_10"}]}
+{"messages": [{"role": "user", "content": "what does app.py contain?"}, {"role": "assistant", "content": "INTENT: file_read PARAM: app.py"}]}
+{"messages": [{"role": "user", "content": "store the fact that example_50"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_50"}]}
+{"messages": [{"role": "user", "content": "what did I tell you about example_7?"}, {"role": "assistant", "content": "INTENT: memory_read PARAM: example_7"}]}
+{"messages": [{"role": "user", "content": "restart example_49"}, {"role": "assistant", "content": "INTENT: system_restart PARAM: example_49"}]}
+{"messages": [{"role": "user", "content": "store the fact that example_52"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_52"}]}
+{"messages": [{"role": "user", "content": "what does the loop do?"}, {"role": "assistant", "content": "INTENT: code_explain PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "evaluate model performance"}, {"role": "assistant", "content": "INTENT: ml_evaluate"}]}
+{"messages": [{"role": "user", "content": "show docker containers"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "train model on data_science_ml_operations_example"}, {"role": "assistant", "content": "INTENT: ml_train PARAM: data_science_ml_operations_example"}]}
+{"messages": [{"role": "user", "content": "check system status"}, {"role": "assistant", "content": "INTENT: system_status"}]}
+{"messages": [{"role": "user", "content": "show me what's in Dockerfile"}, {"role": "assistant", "content": "INTENT: file_read PARAM: Dockerfile"}]}
+{"messages": [{"role": "user", "content": "show me the data.json in this directory"}, {"role": "assistant", "content": "INTENT: file_list PARAM: data.json"}]}
+{"messages": [{"role": "user", "content": "refactor this function for better performance"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: this function"}]}
+{"messages": [{"role": "user", "content": "what's running in docker?"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "check system status"}, {"role": "assistant", "content": "INTENT: system_status"}]}
+{"messages": [{"role": "user", "content": "fix the issue in this function"}, {"role": "assistant", "content": "INTENT: code_debug PARAM: this function"}]}
+{"messages": [{"role": "user", "content": "list all style.css files"}, {"role": "assistant", "content": "INTENT: file_list PARAM: style.css"}]}
+{"messages": [{"role": "user", "content": "restart example_56"}, {"role": "assistant", "content": "INTENT: system_restart PARAM: example_56"}]}
+{"messages": [{"role": "user", "content": "run api inside docker"}, {"role": "assistant", "content": "INTENT: docker_exec PARAM: api"}]}
+{"messages": [{"role": "user", "content": "restart example_33"}, {"role": "assistant", "content": "INTENT: system_restart PARAM: example_33"}]}
+{"messages": [{"role": "user", "content": "show me the config.yaml in this directory"}, {"role": "assistant", "content": "INTENT: file_list PARAM: config.yaml"}]}
+{"messages": [{"role": "user", "content": "save this: example_53"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_53"}]}
+{"messages": [{"role": "user", "content": "search for index.html in files"}, {"role": "assistant", "content": "INTENT: file_search PARAM: index.html"}]}
+{"messages": [{"role": "user", "content": "show logs for db"}, {"role": "assistant", "content": "INTENT: docker_logs PARAM: db"}]}
+{"messages": [{"role": "user", "content": "show me the main.js in this directory"}, {"role": "assistant", "content": "INTENT: file_list PARAM: main.js"}]}
+{"messages": [{"role": "user", "content": "improve this: that class"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: that class"}]}
+{"messages": [{"role": "user", "content": "restart example_51"}, {"role": "assistant", "content": "INTENT: system_restart PARAM: example_51"}]}
+{"messages": [{"role": "user", "content": "change what you know about example_30"}, {"role": "assistant", "content": "INTENT: memory_update PARAM: example_30"}]}
+{"messages": [{"role": "user", "content": "generate a file named data.json"}, {"role": "assistant", "content": "INTENT: file_create PARAM: data.json"}]}
+{"messages": [{"role": "user", "content": "add package.json to that file"}, {"role": "assistant", "content": "INTENT: file_write PARAM: package.json"}]}
+{"messages": [{"role": "user", "content": "execute db in the container"}, {"role": "assistant", "content": "INTENT: docker_exec PARAM: db"}]}
+{"messages": [{"role": "user", "content": "improve this: this algorithm"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: this algorithm"}]}
+{"messages": [{"role": "user", "content": "recall information on example_86"}, {"role": "assistant", "content": "INTENT: memory_read PARAM: example_86"}]}
+{"messages": [{"role": "user", "content": "list all containers"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "generate a file named test.py"}, {"role": "assistant", "content": "INTENT: file_create PARAM: test.py"}]}
+{"messages": [{"role": "user", "content": "update the example_18 information"}, {"role": "assistant", "content": "INTENT: memory_update PARAM: example_18"}]}
+{"messages": [{"role": "user", "content": "search memory for example_87"}, {"role": "assistant", "content": "INTENT: memory_search PARAM: example_87"}]}
+{"messages": [{"role": "user", "content": "change what you know about example_50"}, {"role": "assistant", "content": "INTENT: memory_update PARAM: example_50"}]}
+{"messages": [{"role": "user", "content": "check memory consumption"}, {"role": "assistant", "content": "INTENT: monitor_memory"}]}
+{"messages": [{"role": "user", "content": "check system status"}, {"role": "assistant", "content": "INTENT: system_status"}]}
+{"messages": [{"role": "user", "content": "what's running in docker?"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "configure example_70"}, {"role": "assistant", "content": "INTENT: system_config PARAM: example_70"}]}
+{"messages": [{"role": "user", "content": "what's running in docker?"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "show docker containers"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "spin up redis"}, {"role": "assistant", "content": "INTENT: docker_start PARAM: redis"}]}
+{"messages": [{"role": "user", "content": "debug the API endpoint"}, {"role": "assistant", "content": "INTENT: code_debug PARAM: the API endpoint"}]}
+{"messages": [{"role": "user", "content": "configure example_19"}, {"role": "assistant", "content": "INTENT: system_config PARAM: example_19"}]}
+{"messages": [{"role": "user", "content": "update the example_65 information"}, {"role": "assistant", "content": "INTENT: memory_update PARAM: example_65"}]}
+{"messages": [{"role": "user", "content": "shwo me the logs"}, {"role": "assistant", "content": "INTENT: docker_logs CONFIDENCE: 0.8"}]}
+{"messages": [{"role": "user", "content": "check system status"}, {"role": "assistant", "content": "INTENT: system_status"}]}
+{"messages": [{"role": "user", "content": "save this: example_53"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_53"}]}
+{"messages": [{"role": "user", "content": "what does app.py contain?"}, {"role": "assistant", "content": "INTENT: file_read PARAM: app.py"}]}
+{"messages": [{"role": "user", "content": "thanks, now show me the logs"}, {"role": "assistant", "content": "INTENT: docker_logs ACKNOWLEDGE: thanks"}]}
+{"messages": [{"role": "user", "content": "improve this: the API endpoint"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: the API endpoint"}]}
+{"messages": [{"role": "user", "content": "make a test.py file"}, {"role": "assistant", "content": "INTENT: file_create PARAM: test.py"}]}
+{"messages": [{"role": "user", "content": "add data.json to that file"}, {"role": "assistant", "content": "INTENT: file_write PARAM: data.json"}]}
+{"messages": [{"role": "user", "content": "what does that class do?"}, {"role": "assistant", "content": "INTENT: code_explain PARAM: that class"}]}
+{"messages": [{"role": "user", "content": "delte that"}, {"role": "assistant", "content": "INTENT: file_delete CONFIDENCE: 0.7"}]}
+{"messages": [{"role": "user", "content": "find anything about example_42 in memory"}, {"role": "assistant", "content": "INTENT: memory_search PARAM: example_42"}]}
+{"messages": [{"role": "user", "content": "fix the issue in this function"}, {"role": "assistant", "content": "INTENT: code_debug PARAM: this function"}]}
+{"messages": [{"role": "user", "content": "create a new file called package.json"}, {"role": "assistant", "content": "INTENT: file_create PARAM: package.json"}]}
+{"messages": [{"role": "user", "content": "stop all containers and restart the web server"}, {"role": "assistant", "content": "INTENT: compound_operation ACTIONS: docker_stop_all,docker_start"}]}
+{"messages": [{"role": "user", "content": "find index.html in the codebase"}, {"role": "assistant", "content": "INTENT: file_search PARAM: index.html"}]}
+{"messages": [{"role": "user", "content": "continue execution"}, {"role": "assistant", "content": "INTENT: debug_continue"}]}
+{"messages": [{"role": "user", "content": "create a new file called requirements.txt"}, {"role": "assistant", "content": "INTENT: file_create PARAM: requirements.txt"}]}
+{"messages": [{"role": "user", "content": "save this: example_94"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_94"}]}
+{"messages": [{"role": "user", "content": "reboot the example_46 service"}, {"role": "assistant", "content": "INTENT: system_restart PARAM: example_46"}]}
+{"messages": [{"role": "user", "content": "what's running in docker?"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "save this: example_55"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_55"}]}
+{"messages": [{"role": "user", "content": "show logs for worker"}, {"role": "assistant", "content": "INTENT: docker_logs PARAM: worker"}]}
+{"messages": [{"role": "user", "content": "recall information on example_90"}, {"role": "assistant", "content": "INTENT: memory_read PARAM: example_90"}]}
+{"messages": [{"role": "user", "content": "recall information on example_36"}, {"role": "assistant", "content": "INTENT: memory_read PARAM: example_36"}]}
+{"messages": [{"role": "user", "content": "delete .env"}, {"role": "assistant", "content": "INTENT: file_delete PARAM: .env"}]}
+{"messages": [{"role": "user", "content": "add .env to that file"}, {"role": "assistant", "content": "INTENT: file_write PARAM: .env"}]}
+{"messages": [{"role": "user", "content": "find Dockerfile in the codebase"}, {"role": "assistant", "content": "INTENT: file_search PARAM: Dockerfile"}]}
+{"messages": [{"role": "user", "content": "show me the package.json in this directory"}, {"role": "assistant", "content": "INTENT: file_list PARAM: package.json"}]}
+{"messages": [{"role": "user", "content": "delete README.md"}, {"role": "assistant", "content": "INTENT: file_delete PARAM: README.md"}]}
+{"messages": [{"role": "user", "content": "update the example_12 information"}, {"role": "assistant", "content": "INTENT: memory_update PARAM: example_12"}]}
+{"messages": [{"role": "user", "content": "write index.html to the file"}, {"role": "assistant", "content": "INTENT: file_write PARAM: index.html"}]}
+{"messages": [{"role": "user", "content": "how's the system doing?"}, {"role": "assistant", "content": "INTENT: system_status"}]}
+{"messages": [{"role": "user", "content": "what does .env contain?"}, {"role": "assistant", "content": "INTENT: file_read PARAM: .env"}]}
+{"messages": [{"role": "user", "content": "store the fact that example_17"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_17"}]}
+{"messages": [{"role": "user", "content": "configure example_67"}, {"role": "assistant", "content": "INTENT: system_config PARAM: example_67"}]}
+{"messages": [{"role": "user", "content": "refactor the loop for better performance"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "search for style.css in files"}, {"role": "assistant", "content": "INTENT: file_search PARAM: style.css"}]}
+{"messages": [{"role": "user", "content": "what's running in docker?"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "save this: example_12"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_12"}]}
+{"messages": [{"role": "user", "content": "change example_98 settings"}, {"role": "assistant", "content": "INTENT: system_config PARAM: example_98"}]}
+{"messages": [{"role": "user", "content": "add main.js to that file"}, {"role": "assistant", "content": "INTENT: file_write PARAM: main.js"}]}
+{"messages": [{"role": "user", "content": "debug this algorithm"}, {"role": "assistant", "content": "INTENT: code_debug PARAM: this algorithm"}]}
+{"messages": [{"role": "user", "content": "remember that example_41"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_41"}]}
+{"messages": [{"role": "user", "content": "write tests for the API endpoint"}, {"role": "assistant", "content": "INTENT: code_test PARAM: the API endpoint"}]}
+{"messages": [{"role": "user", "content": "what does the loop do?"}, {"role": "assistant", "content": "INTENT: code_explain PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "shut down the nginx container"}, {"role": "assistant", "content": "INTENT: docker_stop PARAM: nginx"}]}
+{"messages": [{"role": "user", "content": "refactor the loop for better performance"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "what does this function do?"}, {"role": "assistant", "content": "INTENT: code_explain PARAM: this function"}]}
+{"messages": [{"role": "user", "content": "change what you know about example_60"}, {"role": "assistant", "content": "INTENT: memory_update PARAM: example_60"}]}
+{"messages": [{"role": "user", "content": "explain this code: the loop"}, {"role": "assistant", "content": "INTENT: code_explain PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "what do the logs say?"}, {"role": "assistant", "content": "INTENT: system_logs"}]}
+{"messages": [{"role": "user", "content": "show me the index.html in this directory"}, {"role": "assistant", "content": "INTENT: file_list PARAM: index.html"}]}
+{"messages": [{"role": "user", "content": "configure example_30"}, {"role": "assistant", "content": "INTENT: system_config PARAM: example_30"}]}
+{"messages": [{"role": "user", "content": "restart example_98"}, {"role": "assistant", "content": "INTENT: system_restart PARAM: example_98"}]}
+{"messages": [{"role": "user", "content": "find anything about example_24 in memory"}, {"role": "assistant", "content": "INTENT: memory_search PARAM: example_24"}]}
+{"messages": [{"role": "user", "content": "read the contents of config.yaml"}, {"role": "assistant", "content": "INTENT: file_read PARAM: config.yaml"}]}
+{"messages": [{"role": "user", "content": "list all containers"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "create a new file called test.py"}, {"role": "assistant", "content": "INTENT: file_create PARAM: test.py"}]}
+{"messages": [{"role": "user", "content": "show CPU usage"}, {"role": "assistant", "content": "INTENT: monitor_cpu"}]}
+{"messages": [{"role": "user", "content": "execute redis in the container"}, {"role": "assistant", "content": "INTENT: docker_exec PARAM: redis"}]}
+{"messages": [{"role": "user", "content": "fix this"}, {"role": "assistant", "content": "CLARIFY: What needs to be fixed?"}]}
+{"messages": [{"role": "user", "content": "fix the issue in this algorithm"}, {"role": "assistant", "content": "INTENT: code_debug PARAM: this algorithm"}]}
+{"messages": [{"role": "user", "content": "fix the issue in the loop"}, {"role": "assistant", "content": "INTENT: code_debug PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "write index.html to the file"}, {"role": "assistant", "content": "INTENT: file_write PARAM: index.html"}]}
+{"messages": [{"role": "user", "content": "write tests for the API endpoint"}, {"role": "assistant", "content": "INTENT: code_test PARAM: the API endpoint"}]}
+{"messages": [{"role": "user", "content": "show logs for web"}, {"role": "assistant", "content": "INTENT: docker_logs PARAM: web"}]}
+{"messages": [{"role": "user", "content": "check system status"}, {"role": "assistant", "content": "INTENT: system_status"}]}
+{"messages": [{"role": "user", "content": "store the fact that example_7"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_7"}]}
+{"messages": [{"role": "user", "content": "what do the logs say?"}, {"role": "assistant", "content": "INTENT: system_logs"}]}
+{"messages": [{"role": "user", "content": "test the this algorithm function"}, {"role": "assistant", "content": "INTENT: code_test PARAM: this algorithm"}]}
+{"messages": [{"role": "user", "content": "plot correlation matrix"}, {"role": "assistant", "content": "INTENT: data_correlations"}]}
+{"messages": [{"role": "user", "content": "what does .env contain?"}, {"role": "assistant", "content": "INTENT: file_read PARAM: .env"}]}
+{"messages": [{"role": "user", "content": "spin up mysql"}, {"role": "assistant", "content": "INTENT: docker_start PARAM: mysql"}]}
+{"messages": [{"role": "user", "content": "write tests for this algorithm"}, {"role": "assistant", "content": "INTENT: code_test PARAM: this algorithm"}]}
+{"messages": [{"role": "user", "content": "fix the issue in the loop"}, {"role": "assistant", "content": "INTENT: code_debug PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "read the contents of requirements.txt"}, {"role": "assistant", "content": "INTENT: file_read PARAM: requirements.txt"}]}
+{"messages": [{"role": "user", "content": "remember that example_56"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_56"}]}
+{"messages": [{"role": "user", "content": "show me what's in main.js"}, {"role": "assistant", "content": "INTENT: file_read PARAM: main.js"}]}
+{"messages": [{"role": "user", "content": "run that again"}, {"role": "assistant", "content": "CLARIFY: What would you like to run?"}]}
+{"messages": [{"role": "user", "content": "refactor that class for better performance"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: that class"}]}
+{"messages": [{"role": "user", "content": "search memory for example_20"}, {"role": "assistant", "content": "INTENT: memory_search PARAM: example_20"}]}
+{"messages": [{"role": "user", "content": "git push origin main"}, {"role": "assistant", "content": "INTENT: git_push PARAMS: origin main"}]}
+{"messages": [{"role": "user", "content": "show docker containers"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "restart example_7"}, {"role": "assistant", "content": "INTENT: system_restart PARAM: example_7"}]}
+{"messages": [{"role": "user", "content": "what's mysql saying?"}, {"role": "assistant", "content": "INTENT: docker_logs PARAM: mysql"}]}
+{"messages": [{"role": "user", "content": "refactor this algorithm for better performance"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: this algorithm"}]}
+{"messages": [{"role": "user", "content": "what's worker saying?"}, {"role": "assistant", "content": "INTENT: docker_logs PARAM: worker"}]}
+{"messages": [{"role": "user", "content": "test the development_testing_example function"}, {"role": "assistant", "content": "INTENT: test_specific PARAM: development_testing_example"}]}
+{"messages": [{"role": "user", "content": "start the web container"}, {"role": "assistant", "content": "INTENT: docker_start PARAM: web"}]}
+{"messages": [{"role": "user", "content": "remove the requirements.txt file"}, {"role": "assistant", "content": "INTENT: file_delete PARAM: requirements.txt"}]}
+{"messages": [{"role": "user", "content": "delete main.js"}, {"role": "assistant", "content": "INTENT: file_delete PARAM: main.js"}]}
+{"messages": [{"role": "user", "content": "list all containers"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "check system status"}, {"role": "assistant", "content": "INTENT: system_status"}]}
+{"messages": [{"role": "user", "content": "search memory for example_3"}, {"role": "assistant", "content": "INTENT: memory_search PARAM: example_3"}]}
+{"messages": [{"role": "user", "content": "what's web saying?"}, {"role": "assistant", "content": "INTENT: docker_logs PARAM: web"}]}
+{"messages": [{"role": "user", "content": "show pod status"}, {"role": "assistant", "content": "INTENT: k8s_pods"}]}
+{"messages": [{"role": "user", "content": "stop postgres"}, {"role": "assistant", "content": "INTENT: docker_stop PARAM: postgres"}]}
+{"messages": [{"role": "user", "content": "what does main.js contain?"}, {"role": "assistant", "content": "INTENT: file_read PARAM: main.js"}]}
+{"messages": [{"role": "user", "content": "show me what's in data.json"}, {"role": "assistant", "content": "INTENT: file_read PARAM: data.json"}]}
+{"messages": [{"role": "user", "content": "configure example_7"}, {"role": "assistant", "content": "INTENT: system_config PARAM: example_7"}]}
+{"messages": [{"role": "user", "content": "improve this: the loop"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "ls -la"}, {"role": "assistant", "content": "INTENT: file_list PARAMS: all,long"}]}
+{"messages": [{"role": "user", "content": "shut down the redis container"}, {"role": "assistant", "content": "INTENT: docker_stop PARAM: redis"}]}
+{"messages": [{"role": "user", "content": "search for Dockerfile in files"}, {"role": "assistant", "content": "INTENT: file_search PARAM: Dockerfile"}]}
+{"messages": [{"role": "user", "content": "restart example_11"}, {"role": "assistant", "content": "INTENT: system_restart PARAM: example_11"}]}
+{"messages": [{"role": "user", "content": "debug the loop"}, {"role": "assistant", "content": "INTENT: code_debug PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "refactor the loop for better performance"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "run db inside docker"}, {"role": "assistant", "content": "INTENT: docker_exec PARAM: db"}]}

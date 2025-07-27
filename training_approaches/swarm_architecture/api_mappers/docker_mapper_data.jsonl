@@ -1,0 +1,10 @@
+{"messages": [{"role": "user", "content": "docker_list_containers"}, {"role": "assistant", "content": "API_CALL: docker ps -a --format json"}]}
+{"messages": [{"role": "user", "content": "docker_start PARAM:web"}, {"role": "assistant", "content": "API_CALL: docker start web"}]}
+{"messages": [{"role": "user", "content": "docker_stop PARAM:db"}, {"role": "assistant", "content": "API_CALL: docker stop db"}]}
+{"messages": [{"role": "user", "content": "docker_logs PARAM:nginx"}, {"role": "assistant", "content": "API_CALL: docker logs nginx --tail 50"}]}
+{"messages": [{"role": "user", "content": "docker_exec PARAM:api CMD:ps aux"}, {"role": "assistant", "content": "API_CALL: docker exec api ps aux"}]}
+{"messages": [{"role": "user", "content": "docker_compose PARAM:up FLAGS:detached,build"}, {"role": "assistant", "content": "API_CALL: docker-compose up -d --build"}]}
+{"messages": [{"role": "user", "content": "docker_exec PARAM:web CMD:python manage.py migrate"}, {"role": "assistant", "content": "API_CALL: docker exec web python manage.py migrate"}]}
+{"messages": [{"role": "user", "content": "docker_logs PARAM:api FLAGS:follow,tail=100"}, {"role": "assistant", "content": "API_CALL: docker logs -f --tail=100 api"}]}
+{"messages": [{"role": "user", "content": "docker_prune TYPE:volumes FLAGS:force"}, {"role": "assistant", "content": "API_CALL: docker volume prune -f"}]}
+{"messages": [{"role": "user", "content": "docker_build PATH:. TAG:myapp:latest"}, {"role": "assistant", "content": "API_CALL: docker build -t myapp:latest ."}]}
