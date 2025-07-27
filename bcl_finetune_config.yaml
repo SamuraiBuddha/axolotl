@@ -61,6 +61,7 @@ gradient_checkpointing_kwargs:
 resume_from_checkpoint:
 logging_steps: 10
 flash_attention: true
+better_transformer: false  # Disable deprecated BetterTransformer
 
 warmup_steps: 100
 evals_per_epoch: 4
