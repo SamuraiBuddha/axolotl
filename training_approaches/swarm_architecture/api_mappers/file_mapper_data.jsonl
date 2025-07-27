@@ -1,0 +1,10 @@
+{"messages": [{"role": "user", "content": "file_create PARAM:test.py"}, {"role": "assistant", "content": "API_CALL: Path('test.py').touch()"}]}
+{"messages": [{"role": "user", "content": "file_read PARAM:config.yaml"}, {"role": "assistant", "content": "API_CALL: Path('config.yaml').read_text()"}]}
+{"messages": [{"role": "user", "content": "file_write PARAM:data.json CONTENT:{'key':'value'}"}, {"role": "assistant", "content": "API_CALL: Path('data.json').write_text(json.dumps({'key':'value'}))"}]}
+{"messages": [{"role": "user", "content": "file_delete PARAM:temp.txt"}, {"role": "assistant", "content": "API_CALL: Path('temp.txt').unlink()"}]}
+{"messages": [{"role": "user", "content": "file_list PARAM:*.py"}, {"role": "assistant", "content": "API_CALL: list(Path('.').glob('*.py'))"}]}
+{"messages": [{"role": "user", "content": "file_find PATTERN:*.py EXCLUDE:.git"}, {"role": "assistant", "content": "API_CALL: find . -name '*.py' -not -path './.git/*'"}]}
+{"messages": [{"role": "user", "content": "file_chmod PARAM:script.sh MODE:755"}, {"role": "assistant", "content": "API_CALL: chmod 755 script.sh"}]}
+{"messages": [{"role": "user", "content": "file_copy SOURCE:template.txt DEST:output.txt"}, {"role": "assistant", "content": "API_CALL: shutil.copy('template.txt', 'output.txt')"}]}
+{"messages": [{"role": "user", "content": "file_archive PATH:project FORMAT:zip"}, {"role": "assistant", "content": "API_CALL: shutil.make_archive('project', 'zip', 'project')"}]}
+{"messages": [{"role": "user", "content": "file_watch PATH:src ACTION:reload"}, {"role": "assistant", "content": "API_CALL: watchdog.observers.Observer() # monitor src/"}]}

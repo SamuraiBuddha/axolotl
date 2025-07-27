@@ -1,37 +1,57 @@
-# Intent Parser Micro-Model Config (10M params)
-# Specialized for extracting user intent from natural language
+# SmolLM-135M Intent Parser Config
+# Ultra-efficient intent extraction from natural language
 
-base_model: microsoft/Phi-3.5-mini-instruct  # 3.8B base, we'll heavily prune
+base_model: HuggingFaceTB/SmolLM-135M
 model_type: AutoModelForCausalLM
 tokenizer_type: AutoTokenizer
 
-# Dataset pointing to approach-specific training data
+# Dataset
 datasets:
-  - path: ./training_approaches/swarm_architecture/intent_parser/intent_data.jsonl
-    type: completion
+  - path: ./training_approaches/swarm_architecture/intent_parser/training_data.jsonl
+    type: alpaca
     
+# Validation
+val_set_size: 0.1
+eval_datasets:
+  - path: ./training_approaches/swarm_architecture/intent_parser/eval_data.jsonl
+    type: alpaca
+
 # Small model optimizations
 load_in_8bit: false
 load_in_4bit: true
 strict: false
 
-# LoRA for extreme efficiency
+# LoRA configuration for 135M model
 adapter: qlora
-lora_r: 16
-lora_alpha: 32
+lora_r: 8            # Smaller rank for tiny model
+lora_alpha: 16
 lora_dropout: 0.05
 lora_target_linear: true
+lora_modules_to_save:
+  - embed_tokens
+  - lm_head
 
-# Training parameters for small model
-gradient_accumulation_steps: 1
-micro_batch_size: 2
-num_epochs: 3
+# Training hyperparameters
+gradient_accumulation_steps: 4
+micro_batch_size: 4
+num_epochs: 5        # More epochs for small model
 optimizer: adamw_bnb_8bit
 lr_scheduler: cosine
-learning_rate: 0.0003
+learning_rate: 0.0005
+warmup_steps: 20
 
-# Output to approach-specific folder
+# Small context for intent parsing
+max_packed_sequence_len: 256
+pad_to_sequence_len: true
+
+# Output
 output_dir: ./training_approaches/swarm_architecture/intent_parser/output
+save_strategy: steps
+save_steps: 50
 
-# Pruning/distillation settings
-model_max_length: 512  # Short context for intent parsing
+# Logging
+logging_steps: 10
+wandb_mode: disabled
+
+# Early stopping
+early_stopping_patience: 3

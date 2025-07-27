@@ -1,0 +1,43 @@
+# SmolLM-135M Error Recognizer Config  
+# Pattern matches errors and suggests fixes
+
+base_model: HuggingFaceTB/SmolLM-135M
+model_type: AutoModelForCausalLM
+tokenizer_type: AutoTokenizer
+
+# Dataset
+datasets:
+  - path: ./training_approaches/swarm_architecture/error_recognizer/training_data.jsonl
+    type: alpaca
+
+# Small model optimizations
+load_in_8bit: false
+load_in_4bit: true
+strict: false
+
+# LoRA configuration for error patterns
+adapter: qlora
+lora_r: 4          # Very small rank for pattern matching
+lora_alpha: 8
+lora_dropout: 0.05
+lora_target_linear: true
+
+# Training
+gradient_accumulation_steps: 4
+micro_batch_size: 8   # Larger batch for pattern learning
+num_epochs: 3
+optimizer: adamw_bnb_8bit
+lr_scheduler: constant  # Simple for pattern matching
+learning_rate: 0.0003
+
+# Error messages can be longer
+max_packed_sequence_len: 512
+pad_to_sequence_len: false
+
+# Output
+output_dir: ./training_approaches/swarm_architecture/error_recognizer/output
+save_steps: 25
+
+# Logging
+logging_steps: 10
+wandb_mode: disabled

@@ -1,0 +1,836 @@
+{"messages": [{"role": "user", "content": "create a new file called data.json"}, {"role": "assistant", "content": "INTENT: file_create PARAM: data.json"}]}
+{"messages": [{"role": "user", "content": "create a new file called style.css"}, {"role": "assistant", "content": "INTENT: file_create PARAM: style.css"}]}
+{"messages": [{"role": "user", "content": "create a new file called requirements.txt"}, {"role": "assistant", "content": "INTENT: file_create PARAM: requirements.txt"}]}
+{"messages": [{"role": "user", "content": "create a new file called index.html"}, {"role": "assistant", "content": "INTENT: file_create PARAM: index.html"}]}
+{"messages": [{"role": "user", "content": "create a new file called style.css"}, {"role": "assistant", "content": "INTENT: file_create PARAM: style.css"}]}
+{"messages": [{"role": "user", "content": "create a new file called .env"}, {"role": "assistant", "content": "INTENT: file_create PARAM: .env"}]}
+{"messages": [{"role": "user", "content": "create a new file called test.py"}, {"role": "assistant", "content": "INTENT: file_create PARAM: test.py"}]}
+{"messages": [{"role": "user", "content": "create a new file called .env"}, {"role": "assistant", "content": "INTENT: file_create PARAM: .env"}]}
+{"messages": [{"role": "user", "content": "create a new file called README.md"}, {"role": "assistant", "content": "INTENT: file_create PARAM: README.md"}]}
+{"messages": [{"role": "user", "content": "create a new file called package.json"}, {"role": "assistant", "content": "INTENT: file_create PARAM: package.json"}]}
+{"messages": [{"role": "user", "content": "create a new file called .env"}, {"role": "assistant", "content": "INTENT: file_create PARAM: .env"}]}
+{"messages": [{"role": "user", "content": "make a README.md file"}, {"role": "assistant", "content": "INTENT: file_create PARAM: README.md"}]}
+{"messages": [{"role": "user", "content": "make a README.md file"}, {"role": "assistant", "content": "INTENT: file_create PARAM: README.md"}]}
+{"messages": [{"role": "user", "content": "make a test.py file"}, {"role": "assistant", "content": "INTENT: file_create PARAM: test.py"}]}
+{"messages": [{"role": "user", "content": "make a data.json file"}, {"role": "assistant", "content": "INTENT: file_create PARAM: data.json"}]}
+{"messages": [{"role": "user", "content": "make a config.yaml file"}, {"role": "assistant", "content": "INTENT: file_create PARAM: config.yaml"}]}
+{"messages": [{"role": "user", "content": "make a config.yaml file"}, {"role": "assistant", "content": "INTENT: file_create PARAM: config.yaml"}]}
+{"messages": [{"role": "user", "content": "make a index.html file"}, {"role": "assistant", "content": "INTENT: file_create PARAM: index.html"}]}
+{"messages": [{"role": "user", "content": "make a data.json file"}, {"role": "assistant", "content": "INTENT: file_create PARAM: data.json"}]}
+{"messages": [{"role": "user", "content": "make a test.py file"}, {"role": "assistant", "content": "INTENT: file_create PARAM: test.py"}]}
+{"messages": [{"role": "user", "content": "make a Dockerfile file"}, {"role": "assistant", "content": "INTENT: file_create PARAM: Dockerfile"}]}
+{"messages": [{"role": "user", "content": "make a index.html file"}, {"role": "assistant", "content": "INTENT: file_create PARAM: index.html"}]}
+{"messages": [{"role": "user", "content": "generate a file named test.py"}, {"role": "assistant", "content": "INTENT: file_create PARAM: test.py"}]}
+{"messages": [{"role": "user", "content": "generate a file named package.json"}, {"role": "assistant", "content": "INTENT: file_create PARAM: package.json"}]}
+{"messages": [{"role": "user", "content": "generate a file named app.py"}, {"role": "assistant", "content": "INTENT: file_create PARAM: app.py"}]}
+{"messages": [{"role": "user", "content": "generate a file named config.yaml"}, {"role": "assistant", "content": "INTENT: file_create PARAM: config.yaml"}]}
+{"messages": [{"role": "user", "content": "generate a file named data.json"}, {"role": "assistant", "content": "INTENT: file_create PARAM: data.json"}]}
+{"messages": [{"role": "user", "content": "generate a file named app.py"}, {"role": "assistant", "content": "INTENT: file_create PARAM: app.py"}]}
+{"messages": [{"role": "user", "content": "generate a file named README.md"}, {"role": "assistant", "content": "INTENT: file_create PARAM: README.md"}]}
+{"messages": [{"role": "user", "content": "generate a file named package.json"}, {"role": "assistant", "content": "INTENT: file_create PARAM: package.json"}]}
+{"messages": [{"role": "user", "content": "generate a file named test.py"}, {"role": "assistant", "content": "INTENT: file_create PARAM: test.py"}]}
+{"messages": [{"role": "user", "content": "generate a file named Dockerfile"}, {"role": "assistant", "content": "INTENT: file_create PARAM: Dockerfile"}]}
+{"messages": [{"role": "user", "content": "generate a file named app.py"}, {"role": "assistant", "content": "INTENT: file_create PARAM: app.py"}]}
+{"messages": [{"role": "user", "content": "read the contents of config.yaml"}, {"role": "assistant", "content": "INTENT: file_read PARAM: config.yaml"}]}
+{"messages": [{"role": "user", "content": "read the contents of Dockerfile"}, {"role": "assistant", "content": "INTENT: file_read PARAM: Dockerfile"}]}
+{"messages": [{"role": "user", "content": "read the contents of requirements.txt"}, {"role": "assistant", "content": "INTENT: file_read PARAM: requirements.txt"}]}
+{"messages": [{"role": "user", "content": "read the contents of requirements.txt"}, {"role": "assistant", "content": "INTENT: file_read PARAM: requirements.txt"}]}
+{"messages": [{"role": "user", "content": "read the contents of test.py"}, {"role": "assistant", "content": "INTENT: file_read PARAM: test.py"}]}
+{"messages": [{"role": "user", "content": "read the contents of index.html"}, {"role": "assistant", "content": "INTENT: file_read PARAM: index.html"}]}
+{"messages": [{"role": "user", "content": "read the contents of Dockerfile"}, {"role": "assistant", "content": "INTENT: file_read PARAM: Dockerfile"}]}
+{"messages": [{"role": "user", "content": "read the contents of index.html"}, {"role": "assistant", "content": "INTENT: file_read PARAM: index.html"}]}
+{"messages": [{"role": "user", "content": "read the contents of main.js"}, {"role": "assistant", "content": "INTENT: file_read PARAM: main.js"}]}
+{"messages": [{"role": "user", "content": "read the contents of app.py"}, {"role": "assistant", "content": "INTENT: file_read PARAM: app.py"}]}
+{"messages": [{"role": "user", "content": "read the contents of test.py"}, {"role": "assistant", "content": "INTENT: file_read PARAM: test.py"}]}
+{"messages": [{"role": "user", "content": "show me what's in data.json"}, {"role": "assistant", "content": "INTENT: file_read PARAM: data.json"}]}
+{"messages": [{"role": "user", "content": "show me what's in config.yaml"}, {"role": "assistant", "content": "INTENT: file_read PARAM: config.yaml"}]}
+{"messages": [{"role": "user", "content": "show me what's in requirements.txt"}, {"role": "assistant", "content": "INTENT: file_read PARAM: requirements.txt"}]}
+{"messages": [{"role": "user", "content": "show me what's in app.py"}, {"role": "assistant", "content": "INTENT: file_read PARAM: app.py"}]}
+{"messages": [{"role": "user", "content": "show me what's in Dockerfile"}, {"role": "assistant", "content": "INTENT: file_read PARAM: Dockerfile"}]}
+{"messages": [{"role": "user", "content": "show me what's in main.js"}, {"role": "assistant", "content": "INTENT: file_read PARAM: main.js"}]}
+{"messages": [{"role": "user", "content": "show me what's in config.yaml"}, {"role": "assistant", "content": "INTENT: file_read PARAM: config.yaml"}]}
+{"messages": [{"role": "user", "content": "show me what's in Dockerfile"}, {"role": "assistant", "content": "INTENT: file_read PARAM: Dockerfile"}]}
+{"messages": [{"role": "user", "content": "show me what's in style.css"}, {"role": "assistant", "content": "INTENT: file_read PARAM: style.css"}]}
+{"messages": [{"role": "user", "content": "show me what's in Dockerfile"}, {"role": "assistant", "content": "INTENT: file_read PARAM: Dockerfile"}]}
+{"messages": [{"role": "user", "content": "show me what's in main.js"}, {"role": "assistant", "content": "INTENT: file_read PARAM: main.js"}]}
+{"messages": [{"role": "user", "content": "what does config.yaml contain?"}, {"role": "assistant", "content": "INTENT: file_read PARAM: config.yaml"}]}
+{"messages": [{"role": "user", "content": "what does app.py contain?"}, {"role": "assistant", "content": "INTENT: file_read PARAM: app.py"}]}
+{"messages": [{"role": "user", "content": "what does test.py contain?"}, {"role": "assistant", "content": "INTENT: file_read PARAM: test.py"}]}
+{"messages": [{"role": "user", "content": "what does Dockerfile contain?"}, {"role": "assistant", "content": "INTENT: file_read PARAM: Dockerfile"}]}
+{"messages": [{"role": "user", "content": "what does app.py contain?"}, {"role": "assistant", "content": "INTENT: file_read PARAM: app.py"}]}
+{"messages": [{"role": "user", "content": "what does config.yaml contain?"}, {"role": "assistant", "content": "INTENT: file_read PARAM: config.yaml"}]}
+{"messages": [{"role": "user", "content": "what does .env contain?"}, {"role": "assistant", "content": "INTENT: file_read PARAM: .env"}]}
+{"messages": [{"role": "user", "content": "what does .env contain?"}, {"role": "assistant", "content": "INTENT: file_read PARAM: .env"}]}
+{"messages": [{"role": "user", "content": "what does main.js contain?"}, {"role": "assistant", "content": "INTENT: file_read PARAM: main.js"}]}
+{"messages": [{"role": "user", "content": "what does .env contain?"}, {"role": "assistant", "content": "INTENT: file_read PARAM: .env"}]}
+{"messages": [{"role": "user", "content": "what does test.py contain?"}, {"role": "assistant", "content": "INTENT: file_read PARAM: test.py"}]}
+{"messages": [{"role": "user", "content": "write .env to the file"}, {"role": "assistant", "content": "INTENT: file_write PARAM: .env"}]}
+{"messages": [{"role": "user", "content": "write index.html to the file"}, {"role": "assistant", "content": "INTENT: file_write PARAM: index.html"}]}
+{"messages": [{"role": "user", "content": "write requirements.txt to the file"}, {"role": "assistant", "content": "INTENT: file_write PARAM: requirements.txt"}]}
+{"messages": [{"role": "user", "content": "write config.yaml to the file"}, {"role": "assistant", "content": "INTENT: file_write PARAM: config.yaml"}]}
+{"messages": [{"role": "user", "content": "write main.js to the file"}, {"role": "assistant", "content": "INTENT: file_write PARAM: main.js"}]}
+{"messages": [{"role": "user", "content": "write requirements.txt to the file"}, {"role": "assistant", "content": "INTENT: file_write PARAM: requirements.txt"}]}
+{"messages": [{"role": "user", "content": "write Dockerfile to the file"}, {"role": "assistant", "content": "INTENT: file_write PARAM: Dockerfile"}]}
+{"messages": [{"role": "user", "content": "write index.html to the file"}, {"role": "assistant", "content": "INTENT: file_write PARAM: index.html"}]}
+{"messages": [{"role": "user", "content": "write requirements.txt to the file"}, {"role": "assistant", "content": "INTENT: file_write PARAM: requirements.txt"}]}
+{"messages": [{"role": "user", "content": "write config.yaml to the file"}, {"role": "assistant", "content": "INTENT: file_write PARAM: config.yaml"}]}
+{"messages": [{"role": "user", "content": "write style.css to the file"}, {"role": "assistant", "content": "INTENT: file_write PARAM: style.css"}]}
+{"messages": [{"role": "user", "content": "add README.md to that file"}, {"role": "assistant", "content": "INTENT: file_write PARAM: README.md"}]}
+{"messages": [{"role": "user", "content": "add app.py to that file"}, {"role": "assistant", "content": "INTENT: file_write PARAM: app.py"}]}
+{"messages": [{"role": "user", "content": "add package.json to that file"}, {"role": "assistant", "content": "INTENT: file_write PARAM: package.json"}]}
+{"messages": [{"role": "user", "content": "add data.json to that file"}, {"role": "assistant", "content": "INTENT: file_write PARAM: data.json"}]}
+{"messages": [{"role": "user", "content": "add main.js to that file"}, {"role": "assistant", "content": "INTENT: file_write PARAM: main.js"}]}
+{"messages": [{"role": "user", "content": "add package.json to that file"}, {"role": "assistant", "content": "INTENT: file_write PARAM: package.json"}]}
+{"messages": [{"role": "user", "content": "add Dockerfile to that file"}, {"role": "assistant", "content": "INTENT: file_write PARAM: Dockerfile"}]}
+{"messages": [{"role": "user", "content": "add index.html to that file"}, {"role": "assistant", "content": "INTENT: file_write PARAM: index.html"}]}
+{"messages": [{"role": "user", "content": "add style.css to that file"}, {"role": "assistant", "content": "INTENT: file_write PARAM: style.css"}]}
+{"messages": [{"role": "user", "content": "add .env to that file"}, {"role": "assistant", "content": "INTENT: file_write PARAM: .env"}]}
+{"messages": [{"role": "user", "content": "add main.js to that file"}, {"role": "assistant", "content": "INTENT: file_write PARAM: main.js"}]}
+{"messages": [{"role": "user", "content": "delete test.py"}, {"role": "assistant", "content": "INTENT: file_delete PARAM: test.py"}]}
+{"messages": [{"role": "user", "content": "delete main.js"}, {"role": "assistant", "content": "INTENT: file_delete PARAM: main.js"}]}
+{"messages": [{"role": "user", "content": "delete .env"}, {"role": "assistant", "content": "INTENT: file_delete PARAM: .env"}]}
+{"messages": [{"role": "user", "content": "delete main.js"}, {"role": "assistant", "content": "INTENT: file_delete PARAM: main.js"}]}
+{"messages": [{"role": "user", "content": "delete main.js"}, {"role": "assistant", "content": "INTENT: file_delete PARAM: main.js"}]}
+{"messages": [{"role": "user", "content": "delete Dockerfile"}, {"role": "assistant", "content": "INTENT: file_delete PARAM: Dockerfile"}]}
+{"messages": [{"role": "user", "content": "delete .env"}, {"role": "assistant", "content": "INTENT: file_delete PARAM: .env"}]}
+{"messages": [{"role": "user", "content": "delete app.py"}, {"role": "assistant", "content": "INTENT: file_delete PARAM: app.py"}]}
+{"messages": [{"role": "user", "content": "delete README.md"}, {"role": "assistant", "content": "INTENT: file_delete PARAM: README.md"}]}
+{"messages": [{"role": "user", "content": "delete app.py"}, {"role": "assistant", "content": "INTENT: file_delete PARAM: app.py"}]}
+{"messages": [{"role": "user", "content": "delete style.css"}, {"role": "assistant", "content": "INTENT: file_delete PARAM: style.css"}]}
+{"messages": [{"role": "user", "content": "remove the test.py file"}, {"role": "assistant", "content": "INTENT: file_delete PARAM: test.py"}]}
+{"messages": [{"role": "user", "content": "remove the README.md file"}, {"role": "assistant", "content": "INTENT: file_delete PARAM: README.md"}]}
+{"messages": [{"role": "user", "content": "remove the style.css file"}, {"role": "assistant", "content": "INTENT: file_delete PARAM: style.css"}]}
+{"messages": [{"role": "user", "content": "remove the requirements.txt file"}, {"role": "assistant", "content": "INTENT: file_delete PARAM: requirements.txt"}]}
+{"messages": [{"role": "user", "content": "remove the README.md file"}, {"role": "assistant", "content": "INTENT: file_delete PARAM: README.md"}]}
+{"messages": [{"role": "user", "content": "remove the .env file"}, {"role": "assistant", "content": "INTENT: file_delete PARAM: .env"}]}
+{"messages": [{"role": "user", "content": "remove the requirements.txt file"}, {"role": "assistant", "content": "INTENT: file_delete PARAM: requirements.txt"}]}
+{"messages": [{"role": "user", "content": "remove the test.py file"}, {"role": "assistant", "content": "INTENT: file_delete PARAM: test.py"}]}
+{"messages": [{"role": "user", "content": "remove the requirements.txt file"}, {"role": "assistant", "content": "INTENT: file_delete PARAM: requirements.txt"}]}
+{"messages": [{"role": "user", "content": "remove the main.js file"}, {"role": "assistant", "content": "INTENT: file_delete PARAM: main.js"}]}
+{"messages": [{"role": "user", "content": "remove the data.json file"}, {"role": "assistant", "content": "INTENT: file_delete PARAM: data.json"}]}
+{"messages": [{"role": "user", "content": "search for data.json in files"}, {"role": "assistant", "content": "INTENT: file_search PARAM: data.json"}]}
+{"messages": [{"role": "user", "content": "search for index.html in files"}, {"role": "assistant", "content": "INTENT: file_search PARAM: index.html"}]}
+{"messages": [{"role": "user", "content": "search for README.md in files"}, {"role": "assistant", "content": "INTENT: file_search PARAM: README.md"}]}
+{"messages": [{"role": "user", "content": "search for style.css in files"}, {"role": "assistant", "content": "INTENT: file_search PARAM: style.css"}]}
+{"messages": [{"role": "user", "content": "search for style.css in files"}, {"role": "assistant", "content": "INTENT: file_search PARAM: style.css"}]}
+{"messages": [{"role": "user", "content": "search for README.md in files"}, {"role": "assistant", "content": "INTENT: file_search PARAM: README.md"}]}
+{"messages": [{"role": "user", "content": "search for main.js in files"}, {"role": "assistant", "content": "INTENT: file_search PARAM: main.js"}]}
+{"messages": [{"role": "user", "content": "search for config.yaml in files"}, {"role": "assistant", "content": "INTENT: file_search PARAM: config.yaml"}]}
+{"messages": [{"role": "user", "content": "search for README.md in files"}, {"role": "assistant", "content": "INTENT: file_search PARAM: README.md"}]}
+{"messages": [{"role": "user", "content": "search for style.css in files"}, {"role": "assistant", "content": "INTENT: file_search PARAM: style.css"}]}
+{"messages": [{"role": "user", "content": "search for Dockerfile in files"}, {"role": "assistant", "content": "INTENT: file_search PARAM: Dockerfile"}]}
+{"messages": [{"role": "user", "content": "find index.html in the codebase"}, {"role": "assistant", "content": "INTENT: file_search PARAM: index.html"}]}
+{"messages": [{"role": "user", "content": "find package.json in the codebase"}, {"role": "assistant", "content": "INTENT: file_search PARAM: package.json"}]}
+{"messages": [{"role": "user", "content": "find test.py in the codebase"}, {"role": "assistant", "content": "INTENT: file_search PARAM: test.py"}]}
+{"messages": [{"role": "user", "content": "find package.json in the codebase"}, {"role": "assistant", "content": "INTENT: file_search PARAM: package.json"}]}
+{"messages": [{"role": "user", "content": "find style.css in the codebase"}, {"role": "assistant", "content": "INTENT: file_search PARAM: style.css"}]}
+{"messages": [{"role": "user", "content": "find Dockerfile in the codebase"}, {"role": "assistant", "content": "INTENT: file_search PARAM: Dockerfile"}]}
+{"messages": [{"role": "user", "content": "find README.md in the codebase"}, {"role": "assistant", "content": "INTENT: file_search PARAM: README.md"}]}
+{"messages": [{"role": "user", "content": "find test.py in the codebase"}, {"role": "assistant", "content": "INTENT: file_search PARAM: test.py"}]}
+{"messages": [{"role": "user", "content": "find .env in the codebase"}, {"role": "assistant", "content": "INTENT: file_search PARAM: .env"}]}
+{"messages": [{"role": "user", "content": "find test.py in the codebase"}, {"role": "assistant", "content": "INTENT: file_search PARAM: test.py"}]}
+{"messages": [{"role": "user", "content": "find .env in the codebase"}, {"role": "assistant", "content": "INTENT: file_search PARAM: .env"}]}
+{"messages": [{"role": "user", "content": "list all style.css files"}, {"role": "assistant", "content": "INTENT: file_list PARAM: style.css"}]}
+{"messages": [{"role": "user", "content": "list all .env files"}, {"role": "assistant", "content": "INTENT: file_list PARAM: .env"}]}
+{"messages": [{"role": "user", "content": "list all requirements.txt files"}, {"role": "assistant", "content": "INTENT: file_list PARAM: requirements.txt"}]}
+{"messages": [{"role": "user", "content": "list all package.json files"}, {"role": "assistant", "content": "INTENT: file_list PARAM: package.json"}]}
+{"messages": [{"role": "user", "content": "list all Dockerfile files"}, {"role": "assistant", "content": "INTENT: file_list PARAM: Dockerfile"}]}
+{"messages": [{"role": "user", "content": "list all index.html files"}, {"role": "assistant", "content": "INTENT: file_list PARAM: index.html"}]}
+{"messages": [{"role": "user", "content": "list all main.js files"}, {"role": "assistant", "content": "INTENT: file_list PARAM: main.js"}]}
+{"messages": [{"role": "user", "content": "list all style.css files"}, {"role": "assistant", "content": "INTENT: file_list PARAM: style.css"}]}
+{"messages": [{"role": "user", "content": "list all config.yaml files"}, {"role": "assistant", "content": "INTENT: file_list PARAM: config.yaml"}]}
+{"messages": [{"role": "user", "content": "list all requirements.txt files"}, {"role": "assistant", "content": "INTENT: file_list PARAM: requirements.txt"}]}
+{"messages": [{"role": "user", "content": "list all data.json files"}, {"role": "assistant", "content": "INTENT: file_list PARAM: data.json"}]}
+{"messages": [{"role": "user", "content": "show me the test.py in this directory"}, {"role": "assistant", "content": "INTENT: file_list PARAM: test.py"}]}
+{"messages": [{"role": "user", "content": "show me the main.js in this directory"}, {"role": "assistant", "content": "INTENT: file_list PARAM: main.js"}]}
+{"messages": [{"role": "user", "content": "show me the app.py in this directory"}, {"role": "assistant", "content": "INTENT: file_list PARAM: app.py"}]}
+{"messages": [{"role": "user", "content": "show me the test.py in this directory"}, {"role": "assistant", "content": "INTENT: file_list PARAM: test.py"}]}
+{"messages": [{"role": "user", "content": "show me the index.html in this directory"}, {"role": "assistant", "content": "INTENT: file_list PARAM: index.html"}]}
+{"messages": [{"role": "user", "content": "show me the main.js in this directory"}, {"role": "assistant", "content": "INTENT: file_list PARAM: main.js"}]}
+{"messages": [{"role": "user", "content": "show me the config.yaml in this directory"}, {"role": "assistant", "content": "INTENT: file_list PARAM: config.yaml"}]}
+{"messages": [{"role": "user", "content": "show me the data.json in this directory"}, {"role": "assistant", "content": "INTENT: file_list PARAM: data.json"}]}
+{"messages": [{"role": "user", "content": "show me the .env in this directory"}, {"role": "assistant", "content": "INTENT: file_list PARAM: .env"}]}
+{"messages": [{"role": "user", "content": "show me the package.json in this directory"}, {"role": "assistant", "content": "INTENT: file_list PARAM: package.json"}]}
+{"messages": [{"role": "user", "content": "show me the style.css in this directory"}, {"role": "assistant", "content": "INTENT: file_list PARAM: style.css"}]}
+{"messages": [{"role": "user", "content": "list all containers"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "list all containers"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "list all containers"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "list all containers"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "list all containers"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "list all containers"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "list all containers"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "list all containers"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "list all containers"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "list all containers"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "list all containers"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "list all containers"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "list all containers"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "list all containers"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "show docker containers"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "show docker containers"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "show docker containers"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "show docker containers"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "show docker containers"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "show docker containers"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "show docker containers"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "show docker containers"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "show docker containers"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "show docker containers"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "show docker containers"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "show docker containers"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "show docker containers"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "show docker containers"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "what's running in docker?"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "what's running in docker?"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "what's running in docker?"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "what's running in docker?"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "what's running in docker?"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "what's running in docker?"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "what's running in docker?"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "what's running in docker?"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "what's running in docker?"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "what's running in docker?"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "what's running in docker?"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "what's running in docker?"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "what's running in docker?"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "what's running in docker?"}, {"role": "assistant", "content": "INTENT: docker_list"}]}
+{"messages": [{"role": "user", "content": "start the worker container"}, {"role": "assistant", "content": "INTENT: docker_start PARAM: worker"}]}
+{"messages": [{"role": "user", "content": "start the mysql container"}, {"role": "assistant", "content": "INTENT: docker_start PARAM: mysql"}]}
+{"messages": [{"role": "user", "content": "start the nginx container"}, {"role": "assistant", "content": "INTENT: docker_start PARAM: nginx"}]}
+{"messages": [{"role": "user", "content": "start the nginx container"}, {"role": "assistant", "content": "INTENT: docker_start PARAM: nginx"}]}
+{"messages": [{"role": "user", "content": "start the worker container"}, {"role": "assistant", "content": "INTENT: docker_start PARAM: worker"}]}
+{"messages": [{"role": "user", "content": "start the postgres container"}, {"role": "assistant", "content": "INTENT: docker_start PARAM: postgres"}]}
+{"messages": [{"role": "user", "content": "start the postgres container"}, {"role": "assistant", "content": "INTENT: docker_start PARAM: postgres"}]}
+{"messages": [{"role": "user", "content": "start the mysql container"}, {"role": "assistant", "content": "INTENT: docker_start PARAM: mysql"}]}
+{"messages": [{"role": "user", "content": "start the web container"}, {"role": "assistant", "content": "INTENT: docker_start PARAM: web"}]}
+{"messages": [{"role": "user", "content": "start the web container"}, {"role": "assistant", "content": "INTENT: docker_start PARAM: web"}]}
+{"messages": [{"role": "user", "content": "start the redis container"}, {"role": "assistant", "content": "INTENT: docker_start PARAM: redis"}]}
+{"messages": [{"role": "user", "content": "start the db container"}, {"role": "assistant", "content": "INTENT: docker_start PARAM: db"}]}
+{"messages": [{"role": "user", "content": "start the web container"}, {"role": "assistant", "content": "INTENT: docker_start PARAM: web"}]}
+{"messages": [{"role": "user", "content": "start the worker container"}, {"role": "assistant", "content": "INTENT: docker_start PARAM: worker"}]}
+{"messages": [{"role": "user", "content": "spin up db"}, {"role": "assistant", "content": "INTENT: docker_start PARAM: db"}]}
+{"messages": [{"role": "user", "content": "spin up web"}, {"role": "assistant", "content": "INTENT: docker_start PARAM: web"}]}
+{"messages": [{"role": "user", "content": "spin up nginx"}, {"role": "assistant", "content": "INTENT: docker_start PARAM: nginx"}]}
+{"messages": [{"role": "user", "content": "spin up web"}, {"role": "assistant", "content": "INTENT: docker_start PARAM: web"}]}
+{"messages": [{"role": "user", "content": "spin up redis"}, {"role": "assistant", "content": "INTENT: docker_start PARAM: redis"}]}
+{"messages": [{"role": "user", "content": "spin up nginx"}, {"role": "assistant", "content": "INTENT: docker_start PARAM: nginx"}]}
+{"messages": [{"role": "user", "content": "spin up redis"}, {"role": "assistant", "content": "INTENT: docker_start PARAM: redis"}]}
+{"messages": [{"role": "user", "content": "spin up worker"}, {"role": "assistant", "content": "INTENT: docker_start PARAM: worker"}]}
+{"messages": [{"role": "user", "content": "spin up db"}, {"role": "assistant", "content": "INTENT: docker_start PARAM: db"}]}
+{"messages": [{"role": "user", "content": "spin up nginx"}, {"role": "assistant", "content": "INTENT: docker_start PARAM: nginx"}]}
+{"messages": [{"role": "user", "content": "spin up mysql"}, {"role": "assistant", "content": "INTENT: docker_start PARAM: mysql"}]}
+{"messages": [{"role": "user", "content": "spin up redis"}, {"role": "assistant", "content": "INTENT: docker_start PARAM: redis"}]}
+{"messages": [{"role": "user", "content": "spin up worker"}, {"role": "assistant", "content": "INTENT: docker_start PARAM: worker"}]}
+{"messages": [{"role": "user", "content": "spin up redis"}, {"role": "assistant", "content": "INTENT: docker_start PARAM: redis"}]}
+{"messages": [{"role": "user", "content": "stop worker"}, {"role": "assistant", "content": "INTENT: docker_stop PARAM: worker"}]}
+{"messages": [{"role": "user", "content": "stop nginx"}, {"role": "assistant", "content": "INTENT: docker_stop PARAM: nginx"}]}
+{"messages": [{"role": "user", "content": "stop db"}, {"role": "assistant", "content": "INTENT: docker_stop PARAM: db"}]}
+{"messages": [{"role": "user", "content": "stop api"}, {"role": "assistant", "content": "INTENT: docker_stop PARAM: api"}]}
+{"messages": [{"role": "user", "content": "stop db"}, {"role": "assistant", "content": "INTENT: docker_stop PARAM: db"}]}
+{"messages": [{"role": "user", "content": "stop postgres"}, {"role": "assistant", "content": "INTENT: docker_stop PARAM: postgres"}]}
+{"messages": [{"role": "user", "content": "stop web"}, {"role": "assistant", "content": "INTENT: docker_stop PARAM: web"}]}
+{"messages": [{"role": "user", "content": "stop web"}, {"role": "assistant", "content": "INTENT: docker_stop PARAM: web"}]}
+{"messages": [{"role": "user", "content": "stop postgres"}, {"role": "assistant", "content": "INTENT: docker_stop PARAM: postgres"}]}
+{"messages": [{"role": "user", "content": "stop mysql"}, {"role": "assistant", "content": "INTENT: docker_stop PARAM: mysql"}]}
+{"messages": [{"role": "user", "content": "stop mysql"}, {"role": "assistant", "content": "INTENT: docker_stop PARAM: mysql"}]}
+{"messages": [{"role": "user", "content": "stop db"}, {"role": "assistant", "content": "INTENT: docker_stop PARAM: db"}]}
+{"messages": [{"role": "user", "content": "stop mysql"}, {"role": "assistant", "content": "INTENT: docker_stop PARAM: mysql"}]}
+{"messages": [{"role": "user", "content": "stop postgres"}, {"role": "assistant", "content": "INTENT: docker_stop PARAM: postgres"}]}
+{"messages": [{"role": "user", "content": "shut down the mysql container"}, {"role": "assistant", "content": "INTENT: docker_stop PARAM: mysql"}]}
+{"messages": [{"role": "user", "content": "shut down the postgres container"}, {"role": "assistant", "content": "INTENT: docker_stop PARAM: postgres"}]}
+{"messages": [{"role": "user", "content": "shut down the nginx container"}, {"role": "assistant", "content": "INTENT: docker_stop PARAM: nginx"}]}
+{"messages": [{"role": "user", "content": "shut down the nginx container"}, {"role": "assistant", "content": "INTENT: docker_stop PARAM: nginx"}]}
+{"messages": [{"role": "user", "content": "shut down the postgres container"}, {"role": "assistant", "content": "INTENT: docker_stop PARAM: postgres"}]}
+{"messages": [{"role": "user", "content": "shut down the mysql container"}, {"role": "assistant", "content": "INTENT: docker_stop PARAM: mysql"}]}
+{"messages": [{"role": "user", "content": "shut down the redis container"}, {"role": "assistant", "content": "INTENT: docker_stop PARAM: redis"}]}
+{"messages": [{"role": "user", "content": "shut down the postgres container"}, {"role": "assistant", "content": "INTENT: docker_stop PARAM: postgres"}]}
+{"messages": [{"role": "user", "content": "shut down the mysql container"}, {"role": "assistant", "content": "INTENT: docker_stop PARAM: mysql"}]}
+{"messages": [{"role": "user", "content": "shut down the db container"}, {"role": "assistant", "content": "INTENT: docker_stop PARAM: db"}]}
+{"messages": [{"role": "user", "content": "shut down the postgres container"}, {"role": "assistant", "content": "INTENT: docker_stop PARAM: postgres"}]}
+{"messages": [{"role": "user", "content": "shut down the redis container"}, {"role": "assistant", "content": "INTENT: docker_stop PARAM: redis"}]}
+{"messages": [{"role": "user", "content": "shut down the redis container"}, {"role": "assistant", "content": "INTENT: docker_stop PARAM: redis"}]}
+{"messages": [{"role": "user", "content": "shut down the worker container"}, {"role": "assistant", "content": "INTENT: docker_stop PARAM: worker"}]}
+{"messages": [{"role": "user", "content": "show logs for web"}, {"role": "assistant", "content": "INTENT: docker_logs PARAM: web"}]}
+{"messages": [{"role": "user", "content": "show logs for web"}, {"role": "assistant", "content": "INTENT: docker_logs PARAM: web"}]}
+{"messages": [{"role": "user", "content": "show logs for postgres"}, {"role": "assistant", "content": "INTENT: docker_logs PARAM: postgres"}]}
+{"messages": [{"role": "user", "content": "show logs for db"}, {"role": "assistant", "content": "INTENT: docker_logs PARAM: db"}]}
+{"messages": [{"role": "user", "content": "show logs for db"}, {"role": "assistant", "content": "INTENT: docker_logs PARAM: db"}]}
+{"messages": [{"role": "user", "content": "show logs for web"}, {"role": "assistant", "content": "INTENT: docker_logs PARAM: web"}]}
+{"messages": [{"role": "user", "content": "show logs for db"}, {"role": "assistant", "content": "INTENT: docker_logs PARAM: db"}]}
+{"messages": [{"role": "user", "content": "show logs for nginx"}, {"role": "assistant", "content": "INTENT: docker_logs PARAM: nginx"}]}
+{"messages": [{"role": "user", "content": "show logs for api"}, {"role": "assistant", "content": "INTENT: docker_logs PARAM: api"}]}
+{"messages": [{"role": "user", "content": "show logs for nginx"}, {"role": "assistant", "content": "INTENT: docker_logs PARAM: nginx"}]}
+{"messages": [{"role": "user", "content": "show logs for nginx"}, {"role": "assistant", "content": "INTENT: docker_logs PARAM: nginx"}]}
+{"messages": [{"role": "user", "content": "show logs for db"}, {"role": "assistant", "content": "INTENT: docker_logs PARAM: db"}]}
+{"messages": [{"role": "user", "content": "show logs for db"}, {"role": "assistant", "content": "INTENT: docker_logs PARAM: db"}]}
+{"messages": [{"role": "user", "content": "show logs for worker"}, {"role": "assistant", "content": "INTENT: docker_logs PARAM: worker"}]}
+{"messages": [{"role": "user", "content": "what's postgres saying?"}, {"role": "assistant", "content": "INTENT: docker_logs PARAM: postgres"}]}
+{"messages": [{"role": "user", "content": "what's mysql saying?"}, {"role": "assistant", "content": "INTENT: docker_logs PARAM: mysql"}]}
+{"messages": [{"role": "user", "content": "what's web saying?"}, {"role": "assistant", "content": "INTENT: docker_logs PARAM: web"}]}
+{"messages": [{"role": "user", "content": "what's api saying?"}, {"role": "assistant", "content": "INTENT: docker_logs PARAM: api"}]}
+{"messages": [{"role": "user", "content": "what's nginx saying?"}, {"role": "assistant", "content": "INTENT: docker_logs PARAM: nginx"}]}
+{"messages": [{"role": "user", "content": "what's api saying?"}, {"role": "assistant", "content": "INTENT: docker_logs PARAM: api"}]}
+{"messages": [{"role": "user", "content": "what's worker saying?"}, {"role": "assistant", "content": "INTENT: docker_logs PARAM: worker"}]}
+{"messages": [{"role": "user", "content": "what's web saying?"}, {"role": "assistant", "content": "INTENT: docker_logs PARAM: web"}]}
+{"messages": [{"role": "user", "content": "what's db saying?"}, {"role": "assistant", "content": "INTENT: docker_logs PARAM: db"}]}
+{"messages": [{"role": "user", "content": "what's db saying?"}, {"role": "assistant", "content": "INTENT: docker_logs PARAM: db"}]}
+{"messages": [{"role": "user", "content": "what's postgres saying?"}, {"role": "assistant", "content": "INTENT: docker_logs PARAM: postgres"}]}
+{"messages": [{"role": "user", "content": "what's web saying?"}, {"role": "assistant", "content": "INTENT: docker_logs PARAM: web"}]}
+{"messages": [{"role": "user", "content": "what's web saying?"}, {"role": "assistant", "content": "INTENT: docker_logs PARAM: web"}]}
+{"messages": [{"role": "user", "content": "what's worker saying?"}, {"role": "assistant", "content": "INTENT: docker_logs PARAM: worker"}]}
+{"messages": [{"role": "user", "content": "execute nginx in the container"}, {"role": "assistant", "content": "INTENT: docker_exec PARAM: nginx"}]}
+{"messages": [{"role": "user", "content": "execute db in the container"}, {"role": "assistant", "content": "INTENT: docker_exec PARAM: db"}]}
+{"messages": [{"role": "user", "content": "execute mysql in the container"}, {"role": "assistant", "content": "INTENT: docker_exec PARAM: mysql"}]}
+{"messages": [{"role": "user", "content": "execute postgres in the container"}, {"role": "assistant", "content": "INTENT: docker_exec PARAM: postgres"}]}
+{"messages": [{"role": "user", "content": "execute db in the container"}, {"role": "assistant", "content": "INTENT: docker_exec PARAM: db"}]}
+{"messages": [{"role": "user", "content": "execute redis in the container"}, {"role": "assistant", "content": "INTENT: docker_exec PARAM: redis"}]}
+{"messages": [{"role": "user", "content": "execute worker in the container"}, {"role": "assistant", "content": "INTENT: docker_exec PARAM: worker"}]}
+{"messages": [{"role": "user", "content": "execute db in the container"}, {"role": "assistant", "content": "INTENT: docker_exec PARAM: db"}]}
+{"messages": [{"role": "user", "content": "execute db in the container"}, {"role": "assistant", "content": "INTENT: docker_exec PARAM: db"}]}
+{"messages": [{"role": "user", "content": "execute mysql in the container"}, {"role": "assistant", "content": "INTENT: docker_exec PARAM: mysql"}]}
+{"messages": [{"role": "user", "content": "execute postgres in the container"}, {"role": "assistant", "content": "INTENT: docker_exec PARAM: postgres"}]}
+{"messages": [{"role": "user", "content": "execute postgres in the container"}, {"role": "assistant", "content": "INTENT: docker_exec PARAM: postgres"}]}
+{"messages": [{"role": "user", "content": "execute db in the container"}, {"role": "assistant", "content": "INTENT: docker_exec PARAM: db"}]}
+{"messages": [{"role": "user", "content": "execute web in the container"}, {"role": "assistant", "content": "INTENT: docker_exec PARAM: web"}]}
+{"messages": [{"role": "user", "content": "run postgres inside docker"}, {"role": "assistant", "content": "INTENT: docker_exec PARAM: postgres"}]}
+{"messages": [{"role": "user", "content": "run worker inside docker"}, {"role": "assistant", "content": "INTENT: docker_exec PARAM: worker"}]}
+{"messages": [{"role": "user", "content": "run nginx inside docker"}, {"role": "assistant", "content": "INTENT: docker_exec PARAM: nginx"}]}
+{"messages": [{"role": "user", "content": "run db inside docker"}, {"role": "assistant", "content": "INTENT: docker_exec PARAM: db"}]}
+{"messages": [{"role": "user", "content": "run nginx inside docker"}, {"role": "assistant", "content": "INTENT: docker_exec PARAM: nginx"}]}
+{"messages": [{"role": "user", "content": "run postgres inside docker"}, {"role": "assistant", "content": "INTENT: docker_exec PARAM: postgres"}]}
+{"messages": [{"role": "user", "content": "run worker inside docker"}, {"role": "assistant", "content": "INTENT: docker_exec PARAM: worker"}]}
+{"messages": [{"role": "user", "content": "run db inside docker"}, {"role": "assistant", "content": "INTENT: docker_exec PARAM: db"}]}
+{"messages": [{"role": "user", "content": "run nginx inside docker"}, {"role": "assistant", "content": "INTENT: docker_exec PARAM: nginx"}]}
+{"messages": [{"role": "user", "content": "run web inside docker"}, {"role": "assistant", "content": "INTENT: docker_exec PARAM: web"}]}
+{"messages": [{"role": "user", "content": "run mysql inside docker"}, {"role": "assistant", "content": "INTENT: docker_exec PARAM: mysql"}]}
+{"messages": [{"role": "user", "content": "run mysql inside docker"}, {"role": "assistant", "content": "INTENT: docker_exec PARAM: mysql"}]}
+{"messages": [{"role": "user", "content": "run api inside docker"}, {"role": "assistant", "content": "INTENT: docker_exec PARAM: api"}]}
+{"messages": [{"role": "user", "content": "run worker inside docker"}, {"role": "assistant", "content": "INTENT: docker_exec PARAM: worker"}]}
+{"messages": [{"role": "user", "content": "remember that example_98"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_98"}]}
+{"messages": [{"role": "user", "content": "remember that example_63"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_63"}]}
+{"messages": [{"role": "user", "content": "remember that example_84"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_84"}]}
+{"messages": [{"role": "user", "content": "remember that example_17"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_17"}]}
+{"messages": [{"role": "user", "content": "remember that example_22"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_22"}]}
+{"messages": [{"role": "user", "content": "remember that example_56"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_56"}]}
+{"messages": [{"role": "user", "content": "remember that example_47"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_47"}]}
+{"messages": [{"role": "user", "content": "remember that example_98"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_98"}]}
+{"messages": [{"role": "user", "content": "remember that example_85"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_85"}]}
+{"messages": [{"role": "user", "content": "remember that example_58"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_58"}]}
+{"messages": [{"role": "user", "content": "remember that example_95"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_95"}]}
+{"messages": [{"role": "user", "content": "remember that example_12"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_12"}]}
+{"messages": [{"role": "user", "content": "remember that example_5"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_5"}]}
+{"messages": [{"role": "user", "content": "remember that example_20"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_20"}]}
+{"messages": [{"role": "user", "content": "remember that example_97"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_97"}]}
+{"messages": [{"role": "user", "content": "remember that example_41"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_41"}]}
+{"messages": [{"role": "user", "content": "remember that example_74"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_74"}]}
+{"messages": [{"role": "user", "content": "save this: example_36"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_36"}]}
+{"messages": [{"role": "user", "content": "save this: example_15"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_15"}]}
+{"messages": [{"role": "user", "content": "save this: example_53"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_53"}]}
+{"messages": [{"role": "user", "content": "save this: example_35"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_35"}]}
+{"messages": [{"role": "user", "content": "save this: example_14"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_14"}]}
+{"messages": [{"role": "user", "content": "save this: example_53"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_53"}]}
+{"messages": [{"role": "user", "content": "save this: example_76"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_76"}]}
+{"messages": [{"role": "user", "content": "save this: example_55"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_55"}]}
+{"messages": [{"role": "user", "content": "save this: example_48"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_48"}]}
+{"messages": [{"role": "user", "content": "save this: example_63"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_63"}]}
+{"messages": [{"role": "user", "content": "save this: example_7"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_7"}]}
+{"messages": [{"role": "user", "content": "save this: example_18"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_18"}]}
+{"messages": [{"role": "user", "content": "save this: example_63"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_63"}]}
+{"messages": [{"role": "user", "content": "save this: example_12"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_12"}]}
+{"messages": [{"role": "user", "content": "save this: example_84"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_84"}]}
+{"messages": [{"role": "user", "content": "save this: example_20"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_20"}]}
+{"messages": [{"role": "user", "content": "save this: example_94"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_94"}]}
+{"messages": [{"role": "user", "content": "store the fact that example_22"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_22"}]}
+{"messages": [{"role": "user", "content": "store the fact that example_30"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_30"}]}
+{"messages": [{"role": "user", "content": "store the fact that example_79"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_79"}]}
+{"messages": [{"role": "user", "content": "store the fact that example_59"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_59"}]}
+{"messages": [{"role": "user", "content": "store the fact that example_67"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_67"}]}
+{"messages": [{"role": "user", "content": "store the fact that example_50"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_50"}]}
+{"messages": [{"role": "user", "content": "store the fact that example_52"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_52"}]}
+{"messages": [{"role": "user", "content": "store the fact that example_6"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_6"}]}
+{"messages": [{"role": "user", "content": "store the fact that example_13"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_13"}]}
+{"messages": [{"role": "user", "content": "store the fact that example_96"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_96"}]}
+{"messages": [{"role": "user", "content": "store the fact that example_61"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_61"}]}
+{"messages": [{"role": "user", "content": "store the fact that example_85"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_85"}]}
+{"messages": [{"role": "user", "content": "store the fact that example_17"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_17"}]}
+{"messages": [{"role": "user", "content": "store the fact that example_10"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_10"}]}
+{"messages": [{"role": "user", "content": "store the fact that example_73"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_73"}]}
+{"messages": [{"role": "user", "content": "store the fact that example_56"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_56"}]}
+{"messages": [{"role": "user", "content": "store the fact that example_7"}, {"role": "assistant", "content": "INTENT: memory_create PARAM: example_7"}]}
+{"messages": [{"role": "user", "content": "what did I tell you about example_56?"}, {"role": "assistant", "content": "INTENT: memory_read PARAM: example_56"}]}
+{"messages": [{"role": "user", "content": "what did I tell you about example_8?"}, {"role": "assistant", "content": "INTENT: memory_read PARAM: example_8"}]}
+{"messages": [{"role": "user", "content": "what did I tell you about example_7?"}, {"role": "assistant", "content": "INTENT: memory_read PARAM: example_7"}]}
+{"messages": [{"role": "user", "content": "what did I tell you about example_81?"}, {"role": "assistant", "content": "INTENT: memory_read PARAM: example_81"}]}
+{"messages": [{"role": "user", "content": "what did I tell you about example_60?"}, {"role": "assistant", "content": "INTENT: memory_read PARAM: example_60"}]}
+{"messages": [{"role": "user", "content": "what did I tell you about example_61?"}, {"role": "assistant", "content": "INTENT: memory_read PARAM: example_61"}]}
+{"messages": [{"role": "user", "content": "what did I tell you about example_22?"}, {"role": "assistant", "content": "INTENT: memory_read PARAM: example_22"}]}
+{"messages": [{"role": "user", "content": "what did I tell you about example_93?"}, {"role": "assistant", "content": "INTENT: memory_read PARAM: example_93"}]}
+{"messages": [{"role": "user", "content": "what did I tell you about example_55?"}, {"role": "assistant", "content": "INTENT: memory_read PARAM: example_55"}]}
+{"messages": [{"role": "user", "content": "what did I tell you about example_38?"}, {"role": "assistant", "content": "INTENT: memory_read PARAM: example_38"}]}
+{"messages": [{"role": "user", "content": "what did I tell you about example_7?"}, {"role": "assistant", "content": "INTENT: memory_read PARAM: example_7"}]}
+{"messages": [{"role": "user", "content": "what did I tell you about example_43?"}, {"role": "assistant", "content": "INTENT: memory_read PARAM: example_43"}]}
+{"messages": [{"role": "user", "content": "what did I tell you about example_10?"}, {"role": "assistant", "content": "INTENT: memory_read PARAM: example_10"}]}
+{"messages": [{"role": "user", "content": "what did I tell you about example_30?"}, {"role": "assistant", "content": "INTENT: memory_read PARAM: example_30"}]}
+{"messages": [{"role": "user", "content": "what did I tell you about example_51?"}, {"role": "assistant", "content": "INTENT: memory_read PARAM: example_51"}]}
+{"messages": [{"role": "user", "content": "what did I tell you about example_61?"}, {"role": "assistant", "content": "INTENT: memory_read PARAM: example_61"}]}
+{"messages": [{"role": "user", "content": "what did I tell you about example_75?"}, {"role": "assistant", "content": "INTENT: memory_read PARAM: example_75"}]}
+{"messages": [{"role": "user", "content": "recall information on example_61"}, {"role": "assistant", "content": "INTENT: memory_read PARAM: example_61"}]}
+{"messages": [{"role": "user", "content": "recall information on example_66"}, {"role": "assistant", "content": "INTENT: memory_read PARAM: example_66"}]}
+{"messages": [{"role": "user", "content": "recall information on example_97"}, {"role": "assistant", "content": "INTENT: memory_read PARAM: example_97"}]}
+{"messages": [{"role": "user", "content": "recall information on example_3"}, {"role": "assistant", "content": "INTENT: memory_read PARAM: example_3"}]}
+{"messages": [{"role": "user", "content": "recall information on example_86"}, {"role": "assistant", "content": "INTENT: memory_read PARAM: example_86"}]}
+{"messages": [{"role": "user", "content": "recall information on example_39"}, {"role": "assistant", "content": "INTENT: memory_read PARAM: example_39"}]}
+{"messages": [{"role": "user", "content": "recall information on example_90"}, {"role": "assistant", "content": "INTENT: memory_read PARAM: example_90"}]}
+{"messages": [{"role": "user", "content": "recall information on example_36"}, {"role": "assistant", "content": "INTENT: memory_read PARAM: example_36"}]}
+{"messages": [{"role": "user", "content": "recall information on example_27"}, {"role": "assistant", "content": "INTENT: memory_read PARAM: example_27"}]}
+{"messages": [{"role": "user", "content": "recall information on example_25"}, {"role": "assistant", "content": "INTENT: memory_read PARAM: example_25"}]}
+{"messages": [{"role": "user", "content": "recall information on example_94"}, {"role": "assistant", "content": "INTENT: memory_read PARAM: example_94"}]}
+{"messages": [{"role": "user", "content": "recall information on example_34"}, {"role": "assistant", "content": "INTENT: memory_read PARAM: example_34"}]}
+{"messages": [{"role": "user", "content": "recall information on example_52"}, {"role": "assistant", "content": "INTENT: memory_read PARAM: example_52"}]}
+{"messages": [{"role": "user", "content": "recall information on example_78"}, {"role": "assistant", "content": "INTENT: memory_read PARAM: example_78"}]}
+{"messages": [{"role": "user", "content": "recall information on example_97"}, {"role": "assistant", "content": "INTENT: memory_read PARAM: example_97"}]}
+{"messages": [{"role": "user", "content": "recall information on example_18"}, {"role": "assistant", "content": "INTENT: memory_read PARAM: example_18"}]}
+{"messages": [{"role": "user", "content": "recall information on example_50"}, {"role": "assistant", "content": "INTENT: memory_read PARAM: example_50"}]}
+{"messages": [{"role": "user", "content": "update the example_18 information"}, {"role": "assistant", "content": "INTENT: memory_update PARAM: example_18"}]}
+{"messages": [{"role": "user", "content": "update the example_42 information"}, {"role": "assistant", "content": "INTENT: memory_update PARAM: example_42"}]}
+{"messages": [{"role": "user", "content": "update the example_87 information"}, {"role": "assistant", "content": "INTENT: memory_update PARAM: example_87"}]}
+{"messages": [{"role": "user", "content": "update the example_75 information"}, {"role": "assistant", "content": "INTENT: memory_update PARAM: example_75"}]}
+{"messages": [{"role": "user", "content": "update the example_15 information"}, {"role": "assistant", "content": "INTENT: memory_update PARAM: example_15"}]}
+{"messages": [{"role": "user", "content": "update the example_59 information"}, {"role": "assistant", "content": "INTENT: memory_update PARAM: example_59"}]}
+{"messages": [{"role": "user", "content": "update the example_58 information"}, {"role": "assistant", "content": "INTENT: memory_update PARAM: example_58"}]}
+{"messages": [{"role": "user", "content": "update the example_12 information"}, {"role": "assistant", "content": "INTENT: memory_update PARAM: example_12"}]}
+{"messages": [{"role": "user", "content": "update the example_46 information"}, {"role": "assistant", "content": "INTENT: memory_update PARAM: example_46"}]}
+{"messages": [{"role": "user", "content": "update the example_18 information"}, {"role": "assistant", "content": "INTENT: memory_update PARAM: example_18"}]}
+{"messages": [{"role": "user", "content": "update the example_65 information"}, {"role": "assistant", "content": "INTENT: memory_update PARAM: example_65"}]}
+{"messages": [{"role": "user", "content": "update the example_97 information"}, {"role": "assistant", "content": "INTENT: memory_update PARAM: example_97"}]}
+{"messages": [{"role": "user", "content": "update the example_55 information"}, {"role": "assistant", "content": "INTENT: memory_update PARAM: example_55"}]}
+{"messages": [{"role": "user", "content": "update the example_66 information"}, {"role": "assistant", "content": "INTENT: memory_update PARAM: example_66"}]}
+{"messages": [{"role": "user", "content": "update the example_18 information"}, {"role": "assistant", "content": "INTENT: memory_update PARAM: example_18"}]}
+{"messages": [{"role": "user", "content": "update the example_2 information"}, {"role": "assistant", "content": "INTENT: memory_update PARAM: example_2"}]}
+{"messages": [{"role": "user", "content": "update the example_55 information"}, {"role": "assistant", "content": "INTENT: memory_update PARAM: example_55"}]}
+{"messages": [{"role": "user", "content": "change what you know about example_33"}, {"role": "assistant", "content": "INTENT: memory_update PARAM: example_33"}]}
+{"messages": [{"role": "user", "content": "change what you know about example_68"}, {"role": "assistant", "content": "INTENT: memory_update PARAM: example_68"}]}
+{"messages": [{"role": "user", "content": "change what you know about example_50"}, {"role": "assistant", "content": "INTENT: memory_update PARAM: example_50"}]}
+{"messages": [{"role": "user", "content": "change what you know about example_99"}, {"role": "assistant", "content": "INTENT: memory_update PARAM: example_99"}]}
+{"messages": [{"role": "user", "content": "change what you know about example_14"}, {"role": "assistant", "content": "INTENT: memory_update PARAM: example_14"}]}
+{"messages": [{"role": "user", "content": "change what you know about example_42"}, {"role": "assistant", "content": "INTENT: memory_update PARAM: example_42"}]}
+{"messages": [{"role": "user", "content": "change what you know about example_38"}, {"role": "assistant", "content": "INTENT: memory_update PARAM: example_38"}]}
+{"messages": [{"role": "user", "content": "change what you know about example_92"}, {"role": "assistant", "content": "INTENT: memory_update PARAM: example_92"}]}
+{"messages": [{"role": "user", "content": "change what you know about example_60"}, {"role": "assistant", "content": "INTENT: memory_update PARAM: example_60"}]}
+{"messages": [{"role": "user", "content": "change what you know about example_84"}, {"role": "assistant", "content": "INTENT: memory_update PARAM: example_84"}]}
+{"messages": [{"role": "user", "content": "change what you know about example_30"}, {"role": "assistant", "content": "INTENT: memory_update PARAM: example_30"}]}
+{"messages": [{"role": "user", "content": "change what you know about example_82"}, {"role": "assistant", "content": "INTENT: memory_update PARAM: example_82"}]}
+{"messages": [{"role": "user", "content": "change what you know about example_9"}, {"role": "assistant", "content": "INTENT: memory_update PARAM: example_9"}]}
+{"messages": [{"role": "user", "content": "change what you know about example_12"}, {"role": "assistant", "content": "INTENT: memory_update PARAM: example_12"}]}
+{"messages": [{"role": "user", "content": "change what you know about example_77"}, {"role": "assistant", "content": "INTENT: memory_update PARAM: example_77"}]}
+{"messages": [{"role": "user", "content": "change what you know about example_67"}, {"role": "assistant", "content": "INTENT: memory_update PARAM: example_67"}]}
+{"messages": [{"role": "user", "content": "change what you know about example_49"}, {"role": "assistant", "content": "INTENT: memory_update PARAM: example_49"}]}
+{"messages": [{"role": "user", "content": "search memory for example_24"}, {"role": "assistant", "content": "INTENT: memory_search PARAM: example_24"}]}
+{"messages": [{"role": "user", "content": "search memory for example_3"}, {"role": "assistant", "content": "INTENT: memory_search PARAM: example_3"}]}
+{"messages": [{"role": "user", "content": "search memory for example_20"}, {"role": "assistant", "content": "INTENT: memory_search PARAM: example_20"}]}
+{"messages": [{"role": "user", "content": "search memory for example_2"}, {"role": "assistant", "content": "INTENT: memory_search PARAM: example_2"}]}
+{"messages": [{"role": "user", "content": "search memory for example_3"}, {"role": "assistant", "content": "INTENT: memory_search PARAM: example_3"}]}
+{"messages": [{"role": "user", "content": "search memory for example_7"}, {"role": "assistant", "content": "INTENT: memory_search PARAM: example_7"}]}
+{"messages": [{"role": "user", "content": "search memory for example_35"}, {"role": "assistant", "content": "INTENT: memory_search PARAM: example_35"}]}
+{"messages": [{"role": "user", "content": "search memory for example_3"}, {"role": "assistant", "content": "INTENT: memory_search PARAM: example_3"}]}
+{"messages": [{"role": "user", "content": "search memory for example_87"}, {"role": "assistant", "content": "INTENT: memory_search PARAM: example_87"}]}
+{"messages": [{"role": "user", "content": "search memory for example_62"}, {"role": "assistant", "content": "INTENT: memory_search PARAM: example_62"}]}
+{"messages": [{"role": "user", "content": "search memory for example_64"}, {"role": "assistant", "content": "INTENT: memory_search PARAM: example_64"}]}
+{"messages": [{"role": "user", "content": "search memory for example_21"}, {"role": "assistant", "content": "INTENT: memory_search PARAM: example_21"}]}
+{"messages": [{"role": "user", "content": "search memory for example_5"}, {"role": "assistant", "content": "INTENT: memory_search PARAM: example_5"}]}
+{"messages": [{"role": "user", "content": "search memory for example_71"}, {"role": "assistant", "content": "INTENT: memory_search PARAM: example_71"}]}
+{"messages": [{"role": "user", "content": "search memory for example_84"}, {"role": "assistant", "content": "INTENT: memory_search PARAM: example_84"}]}
+{"messages": [{"role": "user", "content": "search memory for example_87"}, {"role": "assistant", "content": "INTENT: memory_search PARAM: example_87"}]}
+{"messages": [{"role": "user", "content": "search memory for example_31"}, {"role": "assistant", "content": "INTENT: memory_search PARAM: example_31"}]}
+{"messages": [{"role": "user", "content": "find anything about example_42 in memory"}, {"role": "assistant", "content": "INTENT: memory_search PARAM: example_42"}]}
+{"messages": [{"role": "user", "content": "find anything about example_51 in memory"}, {"role": "assistant", "content": "INTENT: memory_search PARAM: example_51"}]}
+{"messages": [{"role": "user", "content": "find anything about example_62 in memory"}, {"role": "assistant", "content": "INTENT: memory_search PARAM: example_62"}]}
+{"messages": [{"role": "user", "content": "find anything about example_17 in memory"}, {"role": "assistant", "content": "INTENT: memory_search PARAM: example_17"}]}
+{"messages": [{"role": "user", "content": "find anything about example_16 in memory"}, {"role": "assistant", "content": "INTENT: memory_search PARAM: example_16"}]}
+{"messages": [{"role": "user", "content": "find anything about example_87 in memory"}, {"role": "assistant", "content": "INTENT: memory_search PARAM: example_87"}]}
+{"messages": [{"role": "user", "content": "find anything about example_12 in memory"}, {"role": "assistant", "content": "INTENT: memory_search PARAM: example_12"}]}
+{"messages": [{"role": "user", "content": "find anything about example_24 in memory"}, {"role": "assistant", "content": "INTENT: memory_search PARAM: example_24"}]}
+{"messages": [{"role": "user", "content": "find anything about example_14 in memory"}, {"role": "assistant", "content": "INTENT: memory_search PARAM: example_14"}]}
+{"messages": [{"role": "user", "content": "find anything about example_38 in memory"}, {"role": "assistant", "content": "INTENT: memory_search PARAM: example_38"}]}
+{"messages": [{"role": "user", "content": "find anything about example_24 in memory"}, {"role": "assistant", "content": "INTENT: memory_search PARAM: example_24"}]}
+{"messages": [{"role": "user", "content": "find anything about example_5 in memory"}, {"role": "assistant", "content": "INTENT: memory_search PARAM: example_5"}]}
+{"messages": [{"role": "user", "content": "find anything about example_94 in memory"}, {"role": "assistant", "content": "INTENT: memory_search PARAM: example_94"}]}
+{"messages": [{"role": "user", "content": "find anything about example_81 in memory"}, {"role": "assistant", "content": "INTENT: memory_search PARAM: example_81"}]}
+{"messages": [{"role": "user", "content": "find anything about example_31 in memory"}, {"role": "assistant", "content": "INTENT: memory_search PARAM: example_31"}]}
+{"messages": [{"role": "user", "content": "find anything about example_3 in memory"}, {"role": "assistant", "content": "INTENT: memory_search PARAM: example_3"}]}
+{"messages": [{"role": "user", "content": "find anything about example_87 in memory"}, {"role": "assistant", "content": "INTENT: memory_search PARAM: example_87"}]}
+{"messages": [{"role": "user", "content": "explain this code: the loop"}, {"role": "assistant", "content": "INTENT: code_explain PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "explain this code: that class"}, {"role": "assistant", "content": "INTENT: code_explain PARAM: that class"}]}
+{"messages": [{"role": "user", "content": "explain this code: this algorithm"}, {"role": "assistant", "content": "INTENT: code_explain PARAM: this algorithm"}]}
+{"messages": [{"role": "user", "content": "explain this code: this algorithm"}, {"role": "assistant", "content": "INTENT: code_explain PARAM: this algorithm"}]}
+{"messages": [{"role": "user", "content": "explain this code: the loop"}, {"role": "assistant", "content": "INTENT: code_explain PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "explain this code: this algorithm"}, {"role": "assistant", "content": "INTENT: code_explain PARAM: this algorithm"}]}
+{"messages": [{"role": "user", "content": "explain this code: the loop"}, {"role": "assistant", "content": "INTENT: code_explain PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "explain this code: this function"}, {"role": "assistant", "content": "INTENT: code_explain PARAM: this function"}]}
+{"messages": [{"role": "user", "content": "explain this code: that class"}, {"role": "assistant", "content": "INTENT: code_explain PARAM: that class"}]}
+{"messages": [{"role": "user", "content": "explain this code: this algorithm"}, {"role": "assistant", "content": "INTENT: code_explain PARAM: this algorithm"}]}
+{"messages": [{"role": "user", "content": "explain this code: this algorithm"}, {"role": "assistant", "content": "INTENT: code_explain PARAM: this algorithm"}]}
+{"messages": [{"role": "user", "content": "explain this code: this function"}, {"role": "assistant", "content": "INTENT: code_explain PARAM: this function"}]}
+{"messages": [{"role": "user", "content": "explain this code: the API endpoint"}, {"role": "assistant", "content": "INTENT: code_explain PARAM: the API endpoint"}]}
+{"messages": [{"role": "user", "content": "explain this code: the loop"}, {"role": "assistant", "content": "INTENT: code_explain PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "explain this code: this function"}, {"role": "assistant", "content": "INTENT: code_explain PARAM: this function"}]}
+{"messages": [{"role": "user", "content": "explain this code: the loop"}, {"role": "assistant", "content": "INTENT: code_explain PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "explain this code: the loop"}, {"role": "assistant", "content": "INTENT: code_explain PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "explain this code: the loop"}, {"role": "assistant", "content": "INTENT: code_explain PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "explain this code: the loop"}, {"role": "assistant", "content": "INTENT: code_explain PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "explain this code: this function"}, {"role": "assistant", "content": "INTENT: code_explain PARAM: this function"}]}
+{"messages": [{"role": "user", "content": "what does the loop do?"}, {"role": "assistant", "content": "INTENT: code_explain PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "what does this function do?"}, {"role": "assistant", "content": "INTENT: code_explain PARAM: this function"}]}
+{"messages": [{"role": "user", "content": "what does the loop do?"}, {"role": "assistant", "content": "INTENT: code_explain PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "what does the API endpoint do?"}, {"role": "assistant", "content": "INTENT: code_explain PARAM: the API endpoint"}]}
+{"messages": [{"role": "user", "content": "what does the API endpoint do?"}, {"role": "assistant", "content": "INTENT: code_explain PARAM: the API endpoint"}]}
+{"messages": [{"role": "user", "content": "what does the loop do?"}, {"role": "assistant", "content": "INTENT: code_explain PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "what does this algorithm do?"}, {"role": "assistant", "content": "INTENT: code_explain PARAM: this algorithm"}]}
+{"messages": [{"role": "user", "content": "what does this function do?"}, {"role": "assistant", "content": "INTENT: code_explain PARAM: this function"}]}
+{"messages": [{"role": "user", "content": "what does that class do?"}, {"role": "assistant", "content": "INTENT: code_explain PARAM: that class"}]}
+{"messages": [{"role": "user", "content": "what does this algorithm do?"}, {"role": "assistant", "content": "INTENT: code_explain PARAM: this algorithm"}]}
+{"messages": [{"role": "user", "content": "what does this function do?"}, {"role": "assistant", "content": "INTENT: code_explain PARAM: this function"}]}
+{"messages": [{"role": "user", "content": "what does this function do?"}, {"role": "assistant", "content": "INTENT: code_explain PARAM: this function"}]}
+{"messages": [{"role": "user", "content": "what does the loop do?"}, {"role": "assistant", "content": "INTENT: code_explain PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "what does this algorithm do?"}, {"role": "assistant", "content": "INTENT: code_explain PARAM: this algorithm"}]}
+{"messages": [{"role": "user", "content": "what does this algorithm do?"}, {"role": "assistant", "content": "INTENT: code_explain PARAM: this algorithm"}]}
+{"messages": [{"role": "user", "content": "what does the loop do?"}, {"role": "assistant", "content": "INTENT: code_explain PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "what does this function do?"}, {"role": "assistant", "content": "INTENT: code_explain PARAM: this function"}]}
+{"messages": [{"role": "user", "content": "what does the API endpoint do?"}, {"role": "assistant", "content": "INTENT: code_explain PARAM: the API endpoint"}]}
+{"messages": [{"role": "user", "content": "what does the API endpoint do?"}, {"role": "assistant", "content": "INTENT: code_explain PARAM: the API endpoint"}]}
+{"messages": [{"role": "user", "content": "what does the loop do?"}, {"role": "assistant", "content": "INTENT: code_explain PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "refactor the API endpoint for better performance"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: the API endpoint"}]}
+{"messages": [{"role": "user", "content": "refactor the loop for better performance"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "refactor the loop for better performance"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "refactor this function for better performance"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: this function"}]}
+{"messages": [{"role": "user", "content": "refactor this function for better performance"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: this function"}]}
+{"messages": [{"role": "user", "content": "refactor that class for better performance"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: that class"}]}
+{"messages": [{"role": "user", "content": "refactor this function for better performance"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: this function"}]}
+{"messages": [{"role": "user", "content": "refactor the API endpoint for better performance"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: the API endpoint"}]}
+{"messages": [{"role": "user", "content": "refactor this algorithm for better performance"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: this algorithm"}]}
+{"messages": [{"role": "user", "content": "refactor the loop for better performance"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "refactor the API endpoint for better performance"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: the API endpoint"}]}
+{"messages": [{"role": "user", "content": "refactor this algorithm for better performance"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: this algorithm"}]}
+{"messages": [{"role": "user", "content": "refactor the API endpoint for better performance"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: the API endpoint"}]}
+{"messages": [{"role": "user", "content": "refactor this function for better performance"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: this function"}]}
+{"messages": [{"role": "user", "content": "refactor the API endpoint for better performance"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: the API endpoint"}]}
+{"messages": [{"role": "user", "content": "refactor this algorithm for better performance"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: this algorithm"}]}
+{"messages": [{"role": "user", "content": "refactor the loop for better performance"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "refactor the loop for better performance"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "refactor that class for better performance"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: that class"}]}
+{"messages": [{"role": "user", "content": "refactor this algorithm for better performance"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: this algorithm"}]}
+{"messages": [{"role": "user", "content": "improve this: the loop"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "improve this: the loop"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "improve this: that class"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: that class"}]}
+{"messages": [{"role": "user", "content": "improve this: that class"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: that class"}]}
+{"messages": [{"role": "user", "content": "improve this: the API endpoint"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: the API endpoint"}]}
+{"messages": [{"role": "user", "content": "improve this: this algorithm"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: this algorithm"}]}
+{"messages": [{"role": "user", "content": "improve this: the API endpoint"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: the API endpoint"}]}
+{"messages": [{"role": "user", "content": "improve this: the API endpoint"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: the API endpoint"}]}
+{"messages": [{"role": "user", "content": "improve this: that class"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: that class"}]}
+{"messages": [{"role": "user", "content": "improve this: the loop"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "improve this: this function"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: this function"}]}
+{"messages": [{"role": "user", "content": "improve this: that class"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: that class"}]}
+{"messages": [{"role": "user", "content": "improve this: the loop"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "improve this: the loop"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "improve this: this algorithm"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: this algorithm"}]}
+{"messages": [{"role": "user", "content": "improve this: this algorithm"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: this algorithm"}]}
+{"messages": [{"role": "user", "content": "improve this: that class"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: that class"}]}
+{"messages": [{"role": "user", "content": "improve this: the API endpoint"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: the API endpoint"}]}
+{"messages": [{"role": "user", "content": "improve this: this algorithm"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: this algorithm"}]}
+{"messages": [{"role": "user", "content": "improve this: this function"}, {"role": "assistant", "content": "INTENT: code_refactor PARAM: this function"}]}
+{"messages": [{"role": "user", "content": "write tests for that class"}, {"role": "assistant", "content": "INTENT: code_test PARAM: that class"}]}
+{"messages": [{"role": "user", "content": "write tests for the API endpoint"}, {"role": "assistant", "content": "INTENT: code_test PARAM: the API endpoint"}]}
+{"messages": [{"role": "user", "content": "write tests for the API endpoint"}, {"role": "assistant", "content": "INTENT: code_test PARAM: the API endpoint"}]}
+{"messages": [{"role": "user", "content": "write tests for this algorithm"}, {"role": "assistant", "content": "INTENT: code_test PARAM: this algorithm"}]}
+{"messages": [{"role": "user", "content": "write tests for this function"}, {"role": "assistant", "content": "INTENT: code_test PARAM: this function"}]}
+{"messages": [{"role": "user", "content": "write tests for this algorithm"}, {"role": "assistant", "content": "INTENT: code_test PARAM: this algorithm"}]}
+{"messages": [{"role": "user", "content": "write tests for the loop"}, {"role": "assistant", "content": "INTENT: code_test PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "write tests for this function"}, {"role": "assistant", "content": "INTENT: code_test PARAM: this function"}]}
+{"messages": [{"role": "user", "content": "write tests for this algorithm"}, {"role": "assistant", "content": "INTENT: code_test PARAM: this algorithm"}]}
+{"messages": [{"role": "user", "content": "write tests for the API endpoint"}, {"role": "assistant", "content": "INTENT: code_test PARAM: the API endpoint"}]}
+{"messages": [{"role": "user", "content": "write tests for that class"}, {"role": "assistant", "content": "INTENT: code_test PARAM: that class"}]}
+{"messages": [{"role": "user", "content": "write tests for the loop"}, {"role": "assistant", "content": "INTENT: code_test PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "write tests for the loop"}, {"role": "assistant", "content": "INTENT: code_test PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "write tests for the API endpoint"}, {"role": "assistant", "content": "INTENT: code_test PARAM: the API endpoint"}]}
+{"messages": [{"role": "user", "content": "write tests for this function"}, {"role": "assistant", "content": "INTENT: code_test PARAM: this function"}]}
+{"messages": [{"role": "user", "content": "write tests for the loop"}, {"role": "assistant", "content": "INTENT: code_test PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "write tests for that class"}, {"role": "assistant", "content": "INTENT: code_test PARAM: that class"}]}
+{"messages": [{"role": "user", "content": "write tests for this algorithm"}, {"role": "assistant", "content": "INTENT: code_test PARAM: this algorithm"}]}
+{"messages": [{"role": "user", "content": "write tests for the API endpoint"}, {"role": "assistant", "content": "INTENT: code_test PARAM: the API endpoint"}]}
+{"messages": [{"role": "user", "content": "write tests for this algorithm"}, {"role": "assistant", "content": "INTENT: code_test PARAM: this algorithm"}]}
+{"messages": [{"role": "user", "content": "test the that class function"}, {"role": "assistant", "content": "INTENT: code_test PARAM: that class"}]}
+{"messages": [{"role": "user", "content": "test the the loop function"}, {"role": "assistant", "content": "INTENT: code_test PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "test the the API endpoint function"}, {"role": "assistant", "content": "INTENT: code_test PARAM: the API endpoint"}]}
+{"messages": [{"role": "user", "content": "test the this algorithm function"}, {"role": "assistant", "content": "INTENT: code_test PARAM: this algorithm"}]}
+{"messages": [{"role": "user", "content": "test the the loop function"}, {"role": "assistant", "content": "INTENT: code_test PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "test the the API endpoint function"}, {"role": "assistant", "content": "INTENT: code_test PARAM: the API endpoint"}]}
+{"messages": [{"role": "user", "content": "test the the loop function"}, {"role": "assistant", "content": "INTENT: code_test PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "test the this function function"}, {"role": "assistant", "content": "INTENT: code_test PARAM: this function"}]}
+{"messages": [{"role": "user", "content": "test the this function function"}, {"role": "assistant", "content": "INTENT: code_test PARAM: this function"}]}
+{"messages": [{"role": "user", "content": "test the this algorithm function"}, {"role": "assistant", "content": "INTENT: code_test PARAM: this algorithm"}]}
+{"messages": [{"role": "user", "content": "test the the API endpoint function"}, {"role": "assistant", "content": "INTENT: code_test PARAM: the API endpoint"}]}
+{"messages": [{"role": "user", "content": "test the that class function"}, {"role": "assistant", "content": "INTENT: code_test PARAM: that class"}]}
+{"messages": [{"role": "user", "content": "test the the API endpoint function"}, {"role": "assistant", "content": "INTENT: code_test PARAM: the API endpoint"}]}
+{"messages": [{"role": "user", "content": "test the the API endpoint function"}, {"role": "assistant", "content": "INTENT: code_test PARAM: the API endpoint"}]}
+{"messages": [{"role": "user", "content": "test the this algorithm function"}, {"role": "assistant", "content": "INTENT: code_test PARAM: this algorithm"}]}
+{"messages": [{"role": "user", "content": "test the the API endpoint function"}, {"role": "assistant", "content": "INTENT: code_test PARAM: the API endpoint"}]}
+{"messages": [{"role": "user", "content": "test the that class function"}, {"role": "assistant", "content": "INTENT: code_test PARAM: that class"}]}
+{"messages": [{"role": "user", "content": "test the this algorithm function"}, {"role": "assistant", "content": "INTENT: code_test PARAM: this algorithm"}]}
+{"messages": [{"role": "user", "content": "test the this function function"}, {"role": "assistant", "content": "INTENT: code_test PARAM: this function"}]}
+{"messages": [{"role": "user", "content": "test the that class function"}, {"role": "assistant", "content": "INTENT: code_test PARAM: that class"}]}
+{"messages": [{"role": "user", "content": "debug the loop"}, {"role": "assistant", "content": "INTENT: code_debug PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "debug the API endpoint"}, {"role": "assistant", "content": "INTENT: code_debug PARAM: the API endpoint"}]}
+{"messages": [{"role": "user", "content": "debug the loop"}, {"role": "assistant", "content": "INTENT: code_debug PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "debug the loop"}, {"role": "assistant", "content": "INTENT: code_debug PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "debug the loop"}, {"role": "assistant", "content": "INTENT: code_debug PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "debug this function"}, {"role": "assistant", "content": "INTENT: code_debug PARAM: this function"}]}
+{"messages": [{"role": "user", "content": "debug that class"}, {"role": "assistant", "content": "INTENT: code_debug PARAM: that class"}]}
+{"messages": [{"role": "user", "content": "debug that class"}, {"role": "assistant", "content": "INTENT: code_debug PARAM: that class"}]}
+{"messages": [{"role": "user", "content": "debug that class"}, {"role": "assistant", "content": "INTENT: code_debug PARAM: that class"}]}
+{"messages": [{"role": "user", "content": "debug the loop"}, {"role": "assistant", "content": "INTENT: code_debug PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "debug this algorithm"}, {"role": "assistant", "content": "INTENT: code_debug PARAM: this algorithm"}]}
+{"messages": [{"role": "user", "content": "debug this function"}, {"role": "assistant", "content": "INTENT: code_debug PARAM: this function"}]}
+{"messages": [{"role": "user", "content": "debug the loop"}, {"role": "assistant", "content": "INTENT: code_debug PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "debug the API endpoint"}, {"role": "assistant", "content": "INTENT: code_debug PARAM: the API endpoint"}]}
+{"messages": [{"role": "user", "content": "debug that class"}, {"role": "assistant", "content": "INTENT: code_debug PARAM: that class"}]}
+{"messages": [{"role": "user", "content": "debug the API endpoint"}, {"role": "assistant", "content": "INTENT: code_debug PARAM: the API endpoint"}]}
+{"messages": [{"role": "user", "content": "debug the API endpoint"}, {"role": "assistant", "content": "INTENT: code_debug PARAM: the API endpoint"}]}
+{"messages": [{"role": "user", "content": "debug the loop"}, {"role": "assistant", "content": "INTENT: code_debug PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "debug this algorithm"}, {"role": "assistant", "content": "INTENT: code_debug PARAM: this algorithm"}]}
+{"messages": [{"role": "user", "content": "debug the loop"}, {"role": "assistant", "content": "INTENT: code_debug PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "fix the issue in the loop"}, {"role": "assistant", "content": "INTENT: code_debug PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "fix the issue in this function"}, {"role": "assistant", "content": "INTENT: code_debug PARAM: this function"}]}
+{"messages": [{"role": "user", "content": "fix the issue in this algorithm"}, {"role": "assistant", "content": "INTENT: code_debug PARAM: this algorithm"}]}
+{"messages": [{"role": "user", "content": "fix the issue in this algorithm"}, {"role": "assistant", "content": "INTENT: code_debug PARAM: this algorithm"}]}
+{"messages": [{"role": "user", "content": "fix the issue in this algorithm"}, {"role": "assistant", "content": "INTENT: code_debug PARAM: this algorithm"}]}
+{"messages": [{"role": "user", "content": "fix the issue in the API endpoint"}, {"role": "assistant", "content": "INTENT: code_debug PARAM: the API endpoint"}]}
+{"messages": [{"role": "user", "content": "fix the issue in the loop"}, {"role": "assistant", "content": "INTENT: code_debug PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "fix the issue in the loop"}, {"role": "assistant", "content": "INTENT: code_debug PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "fix the issue in that class"}, {"role": "assistant", "content": "INTENT: code_debug PARAM: that class"}]}
+{"messages": [{"role": "user", "content": "fix the issue in that class"}, {"role": "assistant", "content": "INTENT: code_debug PARAM: that class"}]}
+{"messages": [{"role": "user", "content": "fix the issue in the loop"}, {"role": "assistant", "content": "INTENT: code_debug PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "fix the issue in the API endpoint"}, {"role": "assistant", "content": "INTENT: code_debug PARAM: the API endpoint"}]}
+{"messages": [{"role": "user", "content": "fix the issue in this function"}, {"role": "assistant", "content": "INTENT: code_debug PARAM: this function"}]}
+{"messages": [{"role": "user", "content": "fix the issue in this algorithm"}, {"role": "assistant", "content": "INTENT: code_debug PARAM: this algorithm"}]}
+{"messages": [{"role": "user", "content": "fix the issue in this function"}, {"role": "assistant", "content": "INTENT: code_debug PARAM: this function"}]}
+{"messages": [{"role": "user", "content": "fix the issue in this function"}, {"role": "assistant", "content": "INTENT: code_debug PARAM: this function"}]}
+{"messages": [{"role": "user", "content": "fix the issue in the loop"}, {"role": "assistant", "content": "INTENT: code_debug PARAM: the loop"}]}
+{"messages": [{"role": "user", "content": "fix the issue in that class"}, {"role": "assistant", "content": "INTENT: code_debug PARAM: that class"}]}
+{"messages": [{"role": "user", "content": "fix the issue in the API endpoint"}, {"role": "assistant", "content": "INTENT: code_debug PARAM: the API endpoint"}]}
+{"messages": [{"role": "user", "content": "fix the issue in this algorithm"}, {"role": "assistant", "content": "INTENT: code_debug PARAM: this algorithm"}]}
+{"messages": [{"role": "user", "content": "check system status"}, {"role": "assistant", "content": "INTENT: system_status"}]}
+{"messages": [{"role": "user", "content": "check system status"}, {"role": "assistant", "content": "INTENT: system_status"}]}
+{"messages": [{"role": "user", "content": "check system status"}, {"role": "assistant", "content": "INTENT: system_status"}]}
+{"messages": [{"role": "user", "content": "check system status"}, {"role": "assistant", "content": "INTENT: system_status"}]}
+{"messages": [{"role": "user", "content": "check system status"}, {"role": "assistant", "content": "INTENT: system_status"}]}
+{"messages": [{"role": "user", "content": "check system status"}, {"role": "assistant", "content": "INTENT: system_status"}]}
+{"messages": [{"role": "user", "content": "check system status"}, {"role": "assistant", "content": "INTENT: system_status"}]}
+{"messages": [{"role": "user", "content": "check system status"}, {"role": "assistant", "content": "INTENT: system_status"}]}
+{"messages": [{"role": "user", "content": "check system status"}, {"role": "assistant", "content": "INTENT: system_status"}]}
+{"messages": [{"role": "user", "content": "check system status"}, {"role": "assistant", "content": "INTENT: system_status"}]}
+{"messages": [{"role": "user", "content": "check system status"}, {"role": "assistant", "content": "INTENT: system_status"}]}
+{"messages": [{"role": "user", "content": "check system status"}, {"role": "assistant", "content": "INTENT: system_status"}]}
+{"messages": [{"role": "user", "content": "check system status"}, {"role": "assistant", "content": "INTENT: system_status"}]}
+{"messages": [{"role": "user", "content": "check system status"}, {"role": "assistant", "content": "INTENT: system_status"}]}
+{"messages": [{"role": "user", "content": "check system status"}, {"role": "assistant", "content": "INTENT: system_status"}]}
+{"messages": [{"role": "user", "content": "check system status"}, {"role": "assistant", "content": "INTENT: system_status"}]}
+{"messages": [{"role": "user", "content": "check system status"}, {"role": "assistant", "content": "INTENT: system_status"}]}
+{"messages": [{"role": "user", "content": "check system status"}, {"role": "assistant", "content": "INTENT: system_status"}]}
+{"messages": [{"role": "user", "content": "check system status"}, {"role": "assistant", "content": "INTENT: system_status"}]}
+{"messages": [{"role": "user", "content": "check system status"}, {"role": "assistant", "content": "INTENT: system_status"}]}
+{"messages": [{"role": "user", "content": "how's the system doing?"}, {"role": "assistant", "content": "INTENT: system_status"}]}
+{"messages": [{"role": "user", "content": "how's the system doing?"}, {"role": "assistant", "content": "INTENT: system_status"}]}
+{"messages": [{"role": "user", "content": "how's the system doing?"}, {"role": "assistant", "content": "INTENT: system_status"}]}
+{"messages": [{"role": "user", "content": "how's the system doing?"}, {"role": "assistant", "content": "INTENT: system_status"}]}
+{"messages": [{"role": "user", "content": "how's the system doing?"}, {"role": "assistant", "content": "INTENT: system_status"}]}
+{"messages": [{"role": "user", "content": "how's the system doing?"}, {"role": "assistant", "content": "INTENT: system_status"}]}
+{"messages": [{"role": "user", "content": "how's the system doing?"}, {"role": "assistant", "content": "INTENT: system_status"}]}
+{"messages": [{"role": "user", "content": "how's the system doing?"}, {"role": "assistant", "content": "INTENT: system_status"}]}
+{"messages": [{"role": "user", "content": "how's the system doing?"}, {"role": "assistant", "content": "INTENT: system_status"}]}
+{"messages": [{"role": "user", "content": "how's the system doing?"}, {"role": "assistant", "content": "INTENT: system_status"}]}
+{"messages": [{"role": "user", "content": "how's the system doing?"}, {"role": "assistant", "content": "INTENT: system_status"}]}
+{"messages": [{"role": "user", "content": "how's the system doing?"}, {"role": "assistant", "content": "INTENT: system_status"}]}
+{"messages": [{"role": "user", "content": "how's the system doing?"}, {"role": "assistant", "content": "INTENT: system_status"}]}
+{"messages": [{"role": "user", "content": "how's the system doing?"}, {"role": "assistant", "content": "INTENT: system_status"}]}
+{"messages": [{"role": "user", "content": "how's the system doing?"}, {"role": "assistant", "content": "INTENT: system_status"}]}
+{"messages": [{"role": "user", "content": "how's the system doing?"}, {"role": "assistant", "content": "INTENT: system_status"}]}
+{"messages": [{"role": "user", "content": "how's the system doing?"}, {"role": "assistant", "content": "INTENT: system_status"}]}
+{"messages": [{"role": "user", "content": "how's the system doing?"}, {"role": "assistant", "content": "INTENT: system_status"}]}
+{"messages": [{"role": "user", "content": "how's the system doing?"}, {"role": "assistant", "content": "INTENT: system_status"}]}
+{"messages": [{"role": "user", "content": "how's the system doing?"}, {"role": "assistant", "content": "INTENT: system_status"}]}
+{"messages": [{"role": "user", "content": "restart example_98"}, {"role": "assistant", "content": "INTENT: system_restart PARAM: example_98"}]}
+{"messages": [{"role": "user", "content": "restart example_59"}, {"role": "assistant", "content": "INTENT: system_restart PARAM: example_59"}]}
+{"messages": [{"role": "user", "content": "restart example_90"}, {"role": "assistant", "content": "INTENT: system_restart PARAM: example_90"}]}
+{"messages": [{"role": "user", "content": "restart example_59"}, {"role": "assistant", "content": "INTENT: system_restart PARAM: example_59"}]}
+{"messages": [{"role": "user", "content": "restart example_7"}, {"role": "assistant", "content": "INTENT: system_restart PARAM: example_7"}]}
+{"messages": [{"role": "user", "content": "restart example_90"}, {"role": "assistant", "content": "INTENT: system_restart PARAM: example_90"}]}
+{"messages": [{"role": "user", "content": "restart example_7"}, {"role": "assistant", "content": "INTENT: system_restart PARAM: example_7"}]}
+{"messages": [{"role": "user", "content": "restart example_100"}, {"role": "assistant", "content": "INTENT: system_restart PARAM: example_100"}]}
+{"messages": [{"role": "user", "content": "restart example_16"}, {"role": "assistant", "content": "INTENT: system_restart PARAM: example_16"}]}
+{"messages": [{"role": "user", "content": "restart example_20"}, {"role": "assistant", "content": "INTENT: system_restart PARAM: example_20"}]}
+{"messages": [{"role": "user", "content": "restart example_94"}, {"role": "assistant", "content": "INTENT: system_restart PARAM: example_94"}]}
+{"messages": [{"role": "user", "content": "restart example_11"}, {"role": "assistant", "content": "INTENT: system_restart PARAM: example_11"}]}
+{"messages": [{"role": "user", "content": "restart example_20"}, {"role": "assistant", "content": "INTENT: system_restart PARAM: example_20"}]}
+{"messages": [{"role": "user", "content": "restart example_11"}, {"role": "assistant", "content": "INTENT: system_restart PARAM: example_11"}]}
+{"messages": [{"role": "user", "content": "restart example_10"}, {"role": "assistant", "content": "INTENT: system_restart PARAM: example_10"}]}
+{"messages": [{"role": "user", "content": "restart example_2"}, {"role": "assistant", "content": "INTENT: system_restart PARAM: example_2"}]}
+{"messages": [{"role": "user", "content": "restart example_49"}, {"role": "assistant", "content": "INTENT: system_restart PARAM: example_49"}]}
+{"messages": [{"role": "user", "content": "restart example_33"}, {"role": "assistant", "content": "INTENT: system_restart PARAM: example_33"}]}
+{"messages": [{"role": "user", "content": "restart example_56"}, {"role": "assistant", "content": "INTENT: system_restart PARAM: example_56"}]}
+{"messages": [{"role": "user", "content": "restart example_51"}, {"role": "assistant", "content": "INTENT: system_restart PARAM: example_51"}]}
+{"messages": [{"role": "user", "content": "reboot the example_60 service"}, {"role": "assistant", "content": "INTENT: system_restart PARAM: example_60"}]}
+{"messages": [{"role": "user", "content": "reboot the example_97 service"}, {"role": "assistant", "content": "INTENT: system_restart PARAM: example_97"}]}
+{"messages": [{"role": "user", "content": "reboot the example_55 service"}, {"role": "assistant", "content": "INTENT: system_restart PARAM: example_55"}]}
+{"messages": [{"role": "user", "content": "reboot the example_56 service"}, {"role": "assistant", "content": "INTENT: system_restart PARAM: example_56"}]}
+{"messages": [{"role": "user", "content": "reboot the example_12 service"}, {"role": "assistant", "content": "INTENT: system_restart PARAM: example_12"}]}
+{"messages": [{"role": "user", "content": "reboot the example_68 service"}, {"role": "assistant", "content": "INTENT: system_restart PARAM: example_68"}]}
+{"messages": [{"role": "user", "content": "reboot the example_14 service"}, {"role": "assistant", "content": "INTENT: system_restart PARAM: example_14"}]}
+{"messages": [{"role": "user", "content": "reboot the example_27 service"}, {"role": "assistant", "content": "INTENT: system_restart PARAM: example_27"}]}
+{"messages": [{"role": "user", "content": "reboot the example_41 service"}, {"role": "assistant", "content": "INTENT: system_restart PARAM: example_41"}]}
+{"messages": [{"role": "user", "content": "reboot the example_61 service"}, {"role": "assistant", "content": "INTENT: system_restart PARAM: example_61"}]}
+{"messages": [{"role": "user", "content": "reboot the example_29 service"}, {"role": "assistant", "content": "INTENT: system_restart PARAM: example_29"}]}
+{"messages": [{"role": "user", "content": "reboot the example_66 service"}, {"role": "assistant", "content": "INTENT: system_restart PARAM: example_66"}]}
+{"messages": [{"role": "user", "content": "reboot the example_98 service"}, {"role": "assistant", "content": "INTENT: system_restart PARAM: example_98"}]}
+{"messages": [{"role": "user", "content": "reboot the example_77 service"}, {"role": "assistant", "content": "INTENT: system_restart PARAM: example_77"}]}
+{"messages": [{"role": "user", "content": "reboot the example_19 service"}, {"role": "assistant", "content": "INTENT: system_restart PARAM: example_19"}]}
+{"messages": [{"role": "user", "content": "reboot the example_45 service"}, {"role": "assistant", "content": "INTENT: system_restart PARAM: example_45"}]}
+{"messages": [{"role": "user", "content": "reboot the example_27 service"}, {"role": "assistant", "content": "INTENT: system_restart PARAM: example_27"}]}
+{"messages": [{"role": "user", "content": "reboot the example_65 service"}, {"role": "assistant", "content": "INTENT: system_restart PARAM: example_65"}]}
+{"messages": [{"role": "user", "content": "reboot the example_16 service"}, {"role": "assistant", "content": "INTENT: system_restart PARAM: example_16"}]}
+{"messages": [{"role": "user", "content": "reboot the example_46 service"}, {"role": "assistant", "content": "INTENT: system_restart PARAM: example_46"}]}
+{"messages": [{"role": "user", "content": "configure example_5"}, {"role": "assistant", "content": "INTENT: system_config PARAM: example_5"}]}
+{"messages": [{"role": "user", "content": "configure example_30"}, {"role": "assistant", "content": "INTENT: system_config PARAM: example_30"}]}
+{"messages": [{"role": "user", "content": "configure example_67"}, {"role": "assistant", "content": "INTENT: system_config PARAM: example_67"}]}
+{"messages": [{"role": "user", "content": "configure example_11"}, {"role": "assistant", "content": "INTENT: system_config PARAM: example_11"}]}
+{"messages": [{"role": "user", "content": "configure example_81"}, {"role": "assistant", "content": "INTENT: system_config PARAM: example_81"}]}
+{"messages": [{"role": "user", "content": "configure example_52"}, {"role": "assistant", "content": "INTENT: system_config PARAM: example_52"}]}
+{"messages": [{"role": "user", "content": "configure example_30"}, {"role": "assistant", "content": "INTENT: system_config PARAM: example_30"}]}
+{"messages": [{"role": "user", "content": "configure example_7"}, {"role": "assistant", "content": "INTENT: system_config PARAM: example_7"}]}
+{"messages": [{"role": "user", "content": "configure example_70"}, {"role": "assistant", "content": "INTENT: system_config PARAM: example_70"}]}
+{"messages": [{"role": "user", "content": "configure example_27"}, {"role": "assistant", "content": "INTENT: system_config PARAM: example_27"}]}
+{"messages": [{"role": "user", "content": "configure example_7"}, {"role": "assistant", "content": "INTENT: system_config PARAM: example_7"}]}
+{"messages": [{"role": "user", "content": "configure example_19"}, {"role": "assistant", "content": "INTENT: system_config PARAM: example_19"}]}
+{"messages": [{"role": "user", "content": "configure example_25"}, {"role": "assistant", "content": "INTENT: system_config PARAM: example_25"}]}
+{"messages": [{"role": "user", "content": "configure example_80"}, {"role": "assistant", "content": "INTENT: system_config PARAM: example_80"}]}
+{"messages": [{"role": "user", "content": "configure example_63"}, {"role": "assistant", "content": "INTENT: system_config PARAM: example_63"}]}
+{"messages": [{"role": "user", "content": "configure example_49"}, {"role": "assistant", "content": "INTENT: system_config PARAM: example_49"}]}
+{"messages": [{"role": "user", "content": "configure example_15"}, {"role": "assistant", "content": "INTENT: system_config PARAM: example_15"}]}
+{"messages": [{"role": "user", "content": "configure example_20"}, {"role": "assistant", "content": "INTENT: system_config PARAM: example_20"}]}
+{"messages": [{"role": "user", "content": "configure example_62"}, {"role": "assistant", "content": "INTENT: system_config PARAM: example_62"}]}
+{"messages": [{"role": "user", "content": "configure example_67"}, {"role": "assistant", "content": "INTENT: system_config PARAM: example_67"}]}
+{"messages": [{"role": "user", "content": "change example_75 settings"}, {"role": "assistant", "content": "INTENT: system_config PARAM: example_75"}]}
+{"messages": [{"role": "user", "content": "change example_40 settings"}, {"role": "assistant", "content": "INTENT: system_config PARAM: example_40"}]}
+{"messages": [{"role": "user", "content": "change example_6 settings"}, {"role": "assistant", "content": "INTENT: system_config PARAM: example_6"}]}
+{"messages": [{"role": "user", "content": "change example_54 settings"}, {"role": "assistant", "content": "INTENT: system_config PARAM: example_54"}]}
+{"messages": [{"role": "user", "content": "change example_15 settings"}, {"role": "assistant", "content": "INTENT: system_config PARAM: example_15"}]}
+{"messages": [{"role": "user", "content": "change example_69 settings"}, {"role": "assistant", "content": "INTENT: system_config PARAM: example_69"}]}
+{"messages": [{"role": "user", "content": "change example_88 settings"}, {"role": "assistant", "content": "INTENT: system_config PARAM: example_88"}]}
+{"messages": [{"role": "user", "content": "change example_81 settings"}, {"role": "assistant", "content": "INTENT: system_config PARAM: example_81"}]}
+{"messages": [{"role": "user", "content": "change example_81 settings"}, {"role": "assistant", "content": "INTENT: system_config PARAM: example_81"}]}
+{"messages": [{"role": "user", "content": "change example_92 settings"}, {"role": "assistant", "content": "INTENT: system_config PARAM: example_92"}]}
+{"messages": [{"role": "user", "content": "change example_80 settings"}, {"role": "assistant", "content": "INTENT: system_config PARAM: example_80"}]}
+{"messages": [{"role": "user", "content": "change example_5 settings"}, {"role": "assistant", "content": "INTENT: system_config PARAM: example_5"}]}
+{"messages": [{"role": "user", "content": "change example_95 settings"}, {"role": "assistant", "content": "INTENT: system_config PARAM: example_95"}]}
+{"messages": [{"role": "user", "content": "change example_76 settings"}, {"role": "assistant", "content": "INTENT: system_config PARAM: example_76"}]}
+{"messages": [{"role": "user", "content": "change example_37 settings"}, {"role": "assistant", "content": "INTENT: system_config PARAM: example_37"}]}
+{"messages": [{"role": "user", "content": "change example_18 settings"}, {"role": "assistant", "content": "INTENT: system_config PARAM: example_18"}]}
+{"messages": [{"role": "user", "content": "change example_98 settings"}, {"role": "assistant", "content": "INTENT: system_config PARAM: example_98"}]}
+{"messages": [{"role": "user", "content": "change example_75 settings"}, {"role": "assistant", "content": "INTENT: system_config PARAM: example_75"}]}
+{"messages": [{"role": "user", "content": "change example_43 settings"}, {"role": "assistant", "content": "INTENT: system_config PARAM: example_43"}]}
+{"messages": [{"role": "user", "content": "change example_9 settings"}, {"role": "assistant", "content": "INTENT: system_config PARAM: example_9"}]}
+{"messages": [{"role": "user", "content": "show system logs"}, {"role": "assistant", "content": "INTENT: system_logs"}]}
+{"messages": [{"role": "user", "content": "show system logs"}, {"role": "assistant", "content": "INTENT: system_logs"}]}
+{"messages": [{"role": "user", "content": "show system logs"}, {"role": "assistant", "content": "INTENT: system_logs"}]}
+{"messages": [{"role": "user", "content": "show system logs"}, {"role": "assistant", "content": "INTENT: system_logs"}]}
+{"messages": [{"role": "user", "content": "show system logs"}, {"role": "assistant", "content": "INTENT: system_logs"}]}
+{"messages": [{"role": "user", "content": "show system logs"}, {"role": "assistant", "content": "INTENT: system_logs"}]}
+{"messages": [{"role": "user", "content": "show system logs"}, {"role": "assistant", "content": "INTENT: system_logs"}]}
+{"messages": [{"role": "user", "content": "show system logs"}, {"role": "assistant", "content": "INTENT: system_logs"}]}
+{"messages": [{"role": "user", "content": "show system logs"}, {"role": "assistant", "content": "INTENT: system_logs"}]}
+{"messages": [{"role": "user", "content": "show system logs"}, {"role": "assistant", "content": "INTENT: system_logs"}]}
+{"messages": [{"role": "user", "content": "show system logs"}, {"role": "assistant", "content": "INTENT: system_logs"}]}
+{"messages": [{"role": "user", "content": "show system logs"}, {"role": "assistant", "content": "INTENT: system_logs"}]}
+{"messages": [{"role": "user", "content": "show system logs"}, {"role": "assistant", "content": "INTENT: system_logs"}]}
+{"messages": [{"role": "user", "content": "show system logs"}, {"role": "assistant", "content": "INTENT: system_logs"}]}
+{"messages": [{"role": "user", "content": "show system logs"}, {"role": "assistant", "content": "INTENT: system_logs"}]}
+{"messages": [{"role": "user", "content": "show system logs"}, {"role": "assistant", "content": "INTENT: system_logs"}]}
+{"messages": [{"role": "user", "content": "show system logs"}, {"role": "assistant", "content": "INTENT: system_logs"}]}
+{"messages": [{"role": "user", "content": "show system logs"}, {"role": "assistant", "content": "INTENT: system_logs"}]}
+{"messages": [{"role": "user", "content": "show system logs"}, {"role": "assistant", "content": "INTENT: system_logs"}]}
+{"messages": [{"role": "user", "content": "show system logs"}, {"role": "assistant", "content": "INTENT: system_logs"}]}
+{"messages": [{"role": "user", "content": "what do the logs say?"}, {"role": "assistant", "content": "INTENT: system_logs"}]}
+{"messages": [{"role": "user", "content": "what do the logs say?"}, {"role": "assistant", "content": "INTENT: system_logs"}]}
+{"messages": [{"role": "user", "content": "what do the logs say?"}, {"role": "assistant", "content": "INTENT: system_logs"}]}
+{"messages": [{"role": "user", "content": "what do the logs say?"}, {"role": "assistant", "content": "INTENT: system_logs"}]}
+{"messages": [{"role": "user", "content": "what do the logs say?"}, {"role": "assistant", "content": "INTENT: system_logs"}]}
+{"messages": [{"role": "user", "content": "what do the logs say?"}, {"role": "assistant", "content": "INTENT: system_logs"}]}
+{"messages": [{"role": "user", "content": "what do the logs say?"}, {"role": "assistant", "content": "INTENT: system_logs"}]}
+{"messages": [{"role": "user", "content": "what do the logs say?"}, {"role": "assistant", "content": "INTENT: system_logs"}]}
+{"messages": [{"role": "user", "content": "what do the logs say?"}, {"role": "assistant", "content": "INTENT: system_logs"}]}
+{"messages": [{"role": "user", "content": "what do the logs say?"}, {"role": "assistant", "content": "INTENT: system_logs"}]}
+{"messages": [{"role": "user", "content": "what do the logs say?"}, {"role": "assistant", "content": "INTENT: system_logs"}]}
+{"messages": [{"role": "user", "content": "what do the logs say?"}, {"role": "assistant", "content": "INTENT: system_logs"}]}
+{"messages": [{"role": "user", "content": "what do the logs say?"}, {"role": "assistant", "content": "INTENT: system_logs"}]}
+{"messages": [{"role": "user", "content": "what do the logs say?"}, {"role": "assistant", "content": "INTENT: system_logs"}]}
+{"messages": [{"role": "user", "content": "what do the logs say?"}, {"role": "assistant", "content": "INTENT: system_logs"}]}
+{"messages": [{"role": "user", "content": "what do the logs say?"}, {"role": "assistant", "content": "INTENT: system_logs"}]}
+{"messages": [{"role": "user", "content": "what do the logs say?"}, {"role": "assistant", "content": "INTENT: system_logs"}]}
+{"messages": [{"role": "user", "content": "what do the logs say?"}, {"role": "assistant", "content": "INTENT: system_logs"}]}
+{"messages": [{"role": "user", "content": "what do the logs say?"}, {"role": "assistant", "content": "INTENT: system_logs"}]}
+{"messages": [{"role": "user", "content": "what do the logs say?"}, {"role": "assistant", "content": "INTENT: system_logs"}]}
+{"messages": [{"role": "user", "content": "show me the file"}, {"role": "assistant", "content": "CLARIFY: Which file would you like to see?"}]}
+{"messages": [{"role": "user", "content": "stop it"}, {"role": "assistant", "content": "CLARIFY: What would you like me to stop?"}]}
+{"messages": [{"role": "user", "content": "run that again"}, {"role": "assistant", "content": "CLARIFY: What would you like me to run again?"}]}
+{"messages": [{"role": "user", "content": "fix this"}, {"role": "assistant", "content": "CLARIFY: What needs to be fixed?"}]}
+{"messages": [{"role": "user", "content": "craete a new file"}, {"role": "assistant", "content": "INTENT: file_create CONFIDENCE: 0.8"}]}
+{"messages": [{"role": "user", "content": "delte that"}, {"role": "assistant", "content": "INTENT: file_delete CONFIDENCE: 0.7"}]}
+{"messages": [{"role": "user", "content": "shwo me the logs"}, {"role": "assistant", "content": "INTENT: docker_logs CONFIDENCE: 0.8"}]}
+{"messages": [{"role": "user", "content": "delete it"}, {"role": "assistant", "content": "CLARIFY: What would you like to delete?"}]}
+{"messages": [{"role": "user", "content": "run that again"}, {"role": "assistant", "content": "CLARIFY: What would you like to run?"}]}
+{"messages": [{"role": "user", "content": "fix this"}, {"role": "assistant", "content": "CLARIFY: What needs to be fixed?"}]}
+{"messages": [{"role": "user", "content": "show me the file"}, {"role": "assistant", "content": "CLARIFY: Which file? Or did you mean list files?"}]}
+{"messages": [{"role": "user", "content": "check the status"}, {"role": "assistant", "content": "CLARIFY: Status of what? System, Docker, or Git?"}]}
+{"messages": [{"role": "user", "content": "can you please create a new file called test.py"}, {"role": "assistant", "content": "INTENT: file_create PARAM: test.py"}]}
+{"messages": [{"role": "user", "content": "I need to see what's in the config"}, {"role": "assistant", "content": "INTENT: file_read PARAM: config"}]}
+{"messages": [{"role": "user", "content": "let's spin up the database"}, {"role": "assistant", "content": "INTENT: docker_start PARAM: database"}]}
+{"messages": [{"role": "user", "content": "create a file and then read it"}, {"role": "assistant", "content": "INTENT: compound_operation ACTIONS: file_create,file_read"}]}
+{"messages": [{"role": "user", "content": "stop all containers and restart the web server"}, {"role": "assistant", "content": "INTENT: compound_operation ACTIONS: docker_stop_all,docker_start"}]}
+{"messages": [{"role": "user", "content": "ugh, just delete everything"}, {"role": "assistant", "content": "CLARIFY: This would delete all files. Please confirm specific items to delete."}]}
+{"messages": [{"role": "user", "content": "thanks, now show me the logs"}, {"role": "assistant", "content": "INTENT: docker_logs ACKNOWLEDGE: thanks"}]}
+{"messages": [{"role": "user", "content": "kubectl get pods"}, {"role": "assistant", "content": "INTENT: k8s_pods"}]}
+{"messages": [{"role": "user", "content": "git push origin main"}, {"role": "assistant", "content": "INTENT: git_push PARAMS: origin main"}]}
+{"messages": [{"role": "user", "content": "docker-compose up -d"}, {"role": "assistant", "content": "INTENT: docker_compose_up PARAMS: detached"}]}
+{"messages": [{"role": "user", "content": "cd .."}, {"role": "assistant", "content": "INTENT: change_directory PARAM: .."}]}
+{"messages": [{"role": "user", "content": "ls -la"}, {"role": "assistant", "content": "INTENT: file_list PARAMS: all,long"}]}
+{"messages": [{"role": "user", "content": "grep TODO"}, {"role": "assistant", "content": "INTENT: file_search PARAM: TODO"}]}
+{"messages": [{"role": "user", "content": "commit these changes with message development_git_operations_example"}, {"role": "assistant", "content": "INTENT: git_commit PARAM: development_git_operations_example"}]}
+{"messages": [{"role": "user", "content": "push to main branch"}, {"role": "assistant", "content": "INTENT: git_push"}]}
+{"messages": [{"role": "user", "content": "create a new branch called development_git_operations_example"}, {"role": "assistant", "content": "INTENT: git_branch PARAM: development_git_operations_example"}]}
+{"messages": [{"role": "user", "content": "merge development_git_operations_example into main"}, {"role": "assistant", "content": "INTENT: git_merge PARAM: development_git_operations_example"}]}
+{"messages": [{"role": "user", "content": "show git status"}, {"role": "assistant", "content": "INTENT: git_status"}]}
+{"messages": [{"role": "user", "content": "stash current changes"}, {"role": "assistant", "content": "INTENT: git_stash"}]}
+{"messages": [{"role": "user", "content": "run all tests"}, {"role": "assistant", "content": "INTENT: run_tests"}]}
+{"messages": [{"role": "user", "content": "test the development_testing_example function"}, {"role": "assistant", "content": "INTENT: test_specific PARAM: development_testing_example"}]}
+{"messages": [{"role": "user", "content": "generate coverage report"}, {"role": "assistant", "content": "INTENT: coverage_report"}]}
+{"messages": [{"role": "user", "content": "run integration tests"}, {"role": "assistant", "content": "INTENT: test_integration"}]}
+{"messages": [{"role": "user", "content": "set breakpoint at line development_debugging_example"}, {"role": "assistant", "content": "INTENT: debug_breakpoint PARAM: development_debugging_example"}]}
+{"messages": [{"role": "user", "content": "show call stack"}, {"role": "assistant", "content": "INTENT: debug_stack"}]}
+{"messages": [{"role": "user", "content": "inspect variable development_debugging_example"}, {"role": "assistant", "content": "INTENT: debug_inspect PARAM: development_debugging_example"}]}
+{"messages": [{"role": "user", "content": "continue execution"}, {"role": "assistant", "content": "INTENT: debug_continue"}]}
+{"messages": [{"role": "user", "content": "scale devops_kubernetes_example to 3 replicas"}, {"role": "assistant", "content": "INTENT: k8s_scale PARAM: devops_kubernetes_example"}]}
+{"messages": [{"role": "user", "content": "show pod status"}, {"role": "assistant", "content": "INTENT: k8s_pods"}]}
+{"messages": [{"role": "user", "content": "deploy to production"}, {"role": "assistant", "content": "INTENT: k8s_deploy"}]}
+{"messages": [{"role": "user", "content": "rollback last deployment"}, {"role": "assistant", "content": "INTENT: k8s_rollback"}]}
+{"messages": [{"role": "user", "content": "show CPU usage"}, {"role": "assistant", "content": "INTENT: monitor_cpu"}]}
+{"messages": [{"role": "user", "content": "check memory consumption"}, {"role": "assistant", "content": "INTENT: monitor_memory"}]}
+{"messages": [{"role": "user", "content": "view error logs"}, {"role": "assistant", "content": "INTENT: monitor_logs"}]}
+{"messages": [{"role": "user", "content": "set up alert for devops_monitoring_example"}, {"role": "assistant", "content": "INTENT: monitor_alert PARAM: devops_monitoring_example"}]}
+{"messages": [{"role": "user", "content": "load data_science_analysis_example dataset"}, {"role": "assistant", "content": "INTENT: data_load PARAM: data_science_analysis_example"}]}
+{"messages": [{"role": "user", "content": "show data summary"}, {"role": "assistant", "content": "INTENT: data_summary"}]}
+{"messages": [{"role": "user", "content": "plot correlation matrix"}, {"role": "assistant", "content": "INTENT: data_correlations"}]}
+{"messages": [{"role": "user", "content": "perform PCA analysis"}, {"role": "assistant", "content": "INTENT: data_pca"}]}
+{"messages": [{"role": "user", "content": "train model on data_science_ml_operations_example"}, {"role": "assistant", "content": "INTENT: ml_train PARAM: data_science_ml_operations_example"}]}
+{"messages": [{"role": "user", "content": "evaluate model performance"}, {"role": "assistant", "content": "INTENT: ml_evaluate"}]}
+{"messages": [{"role": "user", "content": "tune hyperparameters"}, {"role": "assistant", "content": "INTENT: ml_tune"}]}
+{"messages": [{"role": "user", "content": "export model to data_science_ml_operations_example"}, {"role": "assistant", "content": "INTENT: ml_export PARAM: data_science_ml_operations_example"}]}

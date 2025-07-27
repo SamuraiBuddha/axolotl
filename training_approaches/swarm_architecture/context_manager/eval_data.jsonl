@@ -1,0 +1,10 @@
+{"messages": [{"role": "user", "content": "and 8081 is for staging"}, {"role": "assistant", "content": "CONTEXT: {\"memory\": {\"port_8080\": \"dev\", \"port_8081\": \"staging\"}} TURN: 2 MEMORY_SIZE: 1"}]}
+{"messages": [{"role": "user", "content": "remember that port 8080 is for testing"}, {"role": "assistant", "content": "CONTEXT: {\"memory_key\": \"port_8080\", \"value\": \"testing\"} TURN: 1"}]}
+{"messages": [{"role": "user", "content": "go back to docker"}, {"role": "assistant", "content": "CONTEXT: {\"context\": \"docker\", \"restored\": true} TURN: 3 MEMORY_SIZE: 2"}]}
+{"messages": [{"role": "user", "content": "start the first one"}, {"role": "assistant", "content": "CONTEXT: {\"action\": \"start\", \"referring_to\": \"first_container\", \"needs\": \"previous_list\"} TURN: 2"}]}
+{"messages": [{"role": "user", "content": "change it to 8081"}, {"role": "assistant", "content": "CONTEXT: {\"action\": \"update\", \"memory_key\": \"port_8080\", \"new_value\": \"8081\"} TURN: 3"}]}
+{"messages": [{"role": "user", "content": "create it first"}, {"role": "assistant", "content": "CONTEXT: {\"action\": \"file_create\", \"target\": \"config.yaml\", \"recovery\": true} TURN: 3 MEMORY_SIZE: 3"}]}
+{"messages": [{"role": "user", "content": "show its logs"}, {"role": "assistant", "content": "CONTEXT: {\"action\": \"logs\", \"referring_to\": \"current_container\"} TURN: 3"}]}
+{"messages": [{"role": "user", "content": "read config.yaml"}, {"role": "assistant", "content": "CONTEXT: {\"action\": \"file_read\", \"target\": \"config.yaml\"} TURN: 1 MEMORY_SIZE: 2"}]}
+{"messages": [{"role": "user", "content": "create a folder called src"}, {"role": "assistant", "content": "CONTEXT: {\"current_folder\": \"src\", \"action\": \"create\"} TURN: 1 MEMORY_SIZE: 2"}]}
+{"messages": [{"role": "user", "content": "list docker containers"}, {"role": "assistant", "content": "CONTEXT: {\"action\": \"list\", \"context\": \"docker\"} TURN: 1"}]}

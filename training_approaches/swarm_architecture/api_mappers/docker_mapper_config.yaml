@@ -1,0 +1,46 @@
+# Qwen2.5-0.5B API Mapper Config
+# Converts intents to specific API calls
+
+base_model: Qwen/Qwen2.5-0.5B-Instruct
+model_type: AutoModelForCausalLM  
+tokenizer_type: AutoTokenizer
+
+# Dataset - will be specified per API type
+datasets:
+  - path: ./training_approaches/swarm_architecture/api_mappers/docker_mapper_data.jsonl
+    type: alpaca
+
+# Small model optimizations
+load_in_8bit: false
+load_in_4bit: true
+strict: false
+
+# LoRA for API mapping
+adapter: qlora
+lora_r: 16
+lora_alpha: 32
+lora_dropout: 0.05
+lora_target_linear: true
+
+# Training
+gradient_accumulation_steps: 2
+micro_batch_size: 4
+num_epochs: 5
+optimizer: adamw_bnb_8bit
+lr_scheduler: cosine
+learning_rate: 0.0004
+
+# API calls are usually short
+max_packed_sequence_len: 256
+pad_to_sequence_len: true
+
+# Output
+output_dir: ./training_approaches/swarm_architecture/api_mappers/docker_output
+save_steps: 10
+
+# Logging
+logging_steps: 5
+wandb_mode: disabled
+
+# Chat template
+chat_template: chatml  # Qwen uses ChatML format
