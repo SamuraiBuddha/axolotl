@@ -1,0 +1,69 @@
+base_model: Qwen/Qwen2.5-Coder-7B
+
+strict: false
+chat_template: qwen3
+
+datasets:
+  - path: ./bcl_complete_training.jsonl
+    type: alpaca
+
+val_set_size: 0.05
+output_dir: ./outputs/bcl_physics_enhanced
+dataset_prepared_path: last_run_prepared
+
+sequence_len: 1024  # Reduced from 2048 for memory
+sample_packing: false
+eval_sample_packing: false
+pad_to_sequence_len: false
+
+# GPU configuration (without quantization for now)
+load_in_4bit: false  # Disabled - PyTorch not detecting CUDA
+adapter: lora  # Changed from qlora
+lora_r: 32  # Reduced from 64 for memory
+lora_alpha: 64  # Reduced from 128
+lora_dropout: 0.05  # Add dropout for better generalization
+lora_target_modules:
+  - q_proj
+  - k_proj
+  - v_proj
+  - o_proj
+  - down_proj
+  - up_proj
+  - gate_proj  # Added for better reasoning
+lora_mlp_kernel: false  # No Triton on Windows
+lora_qkv_kernel: false
+lora_o_kernel: false
+
+wandb_project: bcl-physics-enhanced
+wandb_name: qwen-bcl-physics-complete
+
+gradient_accumulation_steps: 8  # Increased for larger effective batch
+micro_batch_size: 1  # Reduced from 2 for memory
+num_epochs: 2  # Less epochs needed with more diverse data
+optimizer: adamw_torch  # Changed from 4-bit
+lr_scheduler: cosine
+learning_rate: 0.0001  # Slightly lower for fine-tuning on top of existing
+
+bf16: false  # Detection issue even though A4000 supports it
+tf32: false  # Also disable for compatibility
+fp16: true   # Use fp16 instead
+
+gradient_checkpointing: true
+gradient_checkpointing_kwargs:
+  use_reentrant: false
+
+logging_steps: 20
+eval_steps: 100  # Must evenly divide save_steps
+save_steps: 200  # Save every 200 steps
+flash_attention: false  # Still no Windows Triton support
+
+warmup_ratio: 0.1  # 10% warmup
+# evals_per_epoch: 4  # Remove - using eval_steps instead
+# saves_per_epoch: 2  # Remove - using save_steps instead
+weight_decay: 0.01
+
+# Early stopping to prevent overfitting
+early_stopping_patience: 3
+load_best_model_at_end: true
+metric_for_best_model: eval_loss
+greater_is_better: false

@@ -1,5 +1,6 @@
 base_model: Qwen/Qwen2.5-Coder-7B
 # 7B version - smaller download, easier to test with
+device: cpu  # Explicitly set CPU device
 
 # plugins:
 #   - axolotl.integrations.cut_cross_entropy.CutCrossEntropyPlugin
@@ -15,15 +16,15 @@ val_set_size: 0.05  # 5% for validation
 output_dir: ./outputs/bcl_finetune
 dataset_prepared_path: last_run_prepared
 
-sequence_len: 2048
+sequence_len: 512  # Reduced from 2048 for CPU memory constraints
 sample_packing: false  # Better for specialized domains
 eval_sample_packing: false
 pad_to_sequence_len: false
 
 load_in_4bit: false  # Disabled - bitsandbytes device compatibility
 adapter: lora  # Changed from qlora to lora (no quantization)
-lora_r: 32  # Increased for domain adaptation
-lora_alpha: 64
+lora_r: 8  # Reduced from 32 - smaller adapter for faster training
+lora_alpha: 16  # Reduced from 64
 lora_target_modules:
   - q_proj
   - k_proj
@@ -43,13 +44,13 @@ wandb_log_model:
 
 gradient_accumulation_steps: 4
 micro_batch_size: 1  # Reduced from 2 due to no quantization
-num_epochs: 3
+num_epochs: 1  # Reduced from 3 - one epoch is enough for testing
 optimizer: adamw_torch  # Changed from adamw_torch_4bit
 lr_scheduler: cosine
 learning_rate: 0.0002
 
-bf16: auto
-tf32: true
+bf16: false  # Disabled for CPU
+tf32: false  # Requires NVIDIA Ampere GPU
 
 gradient_checkpointing: true  # Changed from offload
 gradient_checkpointing_kwargs:

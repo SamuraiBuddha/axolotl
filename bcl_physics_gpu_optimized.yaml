@@ -1,0 +1,72 @@
+base_model: Qwen/Qwen2.5-Coder-7B
+
+strict: false
+chat_template: qwen3
+
+datasets:
+  - path: ./bcl_complete_training.jsonl
+    type: alpaca
+
+val_set_size: 0.05
+output_dir: ./outputs/bcl_physics_gpu
+dataset_prepared_path: last_run_prepared
+
+sequence_len: 2048  # Full length with GPU
+sample_packing: false
+eval_sample_packing: false
+pad_to_sequence_len: false
+
+# A4000 GPU optimized settings
+load_in_4bit: true
+adapter: qlora
+lora_r: 64  # Higher rank for physics understanding
+lora_alpha: 128
+lora_dropout: 0.05
+lora_target_modules:
+  - q_proj
+  - k_proj
+  - v_proj
+  - o_proj
+  - down_proj
+  - up_proj
+  - gate_proj
+lora_mlp_kernel: false  # Still no Triton on Windows
+lora_qkv_kernel: false
+lora_o_kernel: false
+
+# Device map for proper loading
+device_map: auto  # Let it handle device placement
+low_cpu_mem_usage: true  # Help with loading
+
+wandb_project: bcl-physics-gpu
+wandb_name: qwen-bcl-physics-a4000
+
+gradient_accumulation_steps: 4  # Good for A4000
+micro_batch_size: 4  # A4000 can handle this with 4-bit
+num_epochs: 2
+optimizer: adamw_torch_4bit
+lr_scheduler: cosine
+learning_rate: 0.0002
+
+# A4000 supports these
+bf16: true
+tf32: true
+fp16: false  # Use bf16 instead
+
+gradient_checkpointing: true
+gradient_checkpointing_kwargs:
+  use_reentrant: false
+
+logging_steps: 20
+eval_steps: 100
+save_steps: 200
+flash_attention: false  # No Triton
+
+warmup_ratio: 0.1
+weight_decay: 0.01
+
+# Early stopping
+early_stopping_patience: 3
+load_best_model_at_end: true
+metric_for_best_model: eval_loss
+greater_is_better: false
