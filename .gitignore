@@ -190,3 +190,20 @@ out/
 
 # vim
 *.swp
+
+
+# Swarm architecture training files
+training_approaches/swarm_architecture/**/*.safetensors
+training_approaches/swarm_architecture/**/*.pt
+training_approaches/swarm_architecture/**/*.pth
+training_approaches/swarm_architecture/**/model.safetensors
+training_approaches/swarm_architecture/**/optimizer.pt
+training_approaches/swarm_architecture/**/scheduler.pt
+training_approaches/swarm_architecture/**/rng_state.pth
+
+# Virtual environments in swarm architecture
+training_approaches/swarm_architecture/swarm_env/
+training_approaches/swarm_architecture/**/swarm_env/
+
+# ONNX models
+training_approaches/swarm_architecture/**/onnx/
