@@ -1,0 +1,44 @@
+# Minimal config for axolotl - works with basic setup
+base_model: gpt2  # Use GPT-2 instead of SmolLM for now
+model_type: AutoModelForCausalLM
+tokenizer_type: AutoTokenizer
+
+# Dataset
+datasets:
+  - path: ./intent_parser/training_data.jsonl
+    type: alpaca
+
+# No quantization to avoid bitsandbytes issues
+load_in_8bit: false
+load_in_4bit: false
+
+# Simple LoRA config
+adapter: lora
+lora_r: 8
+lora_alpha: 16
+lora_dropout: 0.05
+lora_target_linear: true
+
+# Minimal training params
+gradient_accumulation_steps: 1
+micro_batch_size: 2
+num_epochs: 3
+learning_rate: 0.0003
+
+# Short sequences
+sequence_len: 256
+pad_to_sequence_len: true
+
+# Output
+output_dir: ./intent_parser/axolotl_output
+
+# Disable features that might cause issues
+gradient_checkpointing: false
+flash_attention: false
+wandb_mode: disabled
+trust_remote_code: true
+
+# Simple trainer
+warmup_steps: 10
+save_steps: 100
+logging_steps: 10

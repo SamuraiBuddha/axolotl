@@ -1,0 +1,40 @@
+{
+  "timestamp": "2025-07-27T12:30:49.108164",
+  "models": {
+    "intent_parser": {
+      "trained": false,
+      "config": "intent_parser/config.yaml",
+      "output_exists": false,
+      "estimated_time": "30 minutes"
+    },
+    "error_recognizer": {
+      "trained": false,
+      "config": "error_recognizer/config.yaml",
+      "output_exists": false,
+      "estimated_time": "25 minutes"
+    },
+    "context_manager": {
+      "trained": false,
+      "config": "context_manager/config.yaml",
+      "output_exists": false,
+      "estimated_time": "20 minutes"
+    },
+    "api_mapper_docker": {
+      "trained": false,
+      "config": "api_mappers/docker_mapper_config.yaml",
+      "output_exists": false,
+      "estimated_time": "15 minutes"
+    },
+    "orchestrator": {
+      "trained": false,
+      "config": "orchestrator/config.yaml",
+      "output_exists": false,
+      "estimated_time": "45 minutes"
+    }
+  },
+  "summary": {
+    "total": 5,
+    "successful": 0,
+    "failed": 5
+  }
+}

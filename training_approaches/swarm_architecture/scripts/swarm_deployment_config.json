@@ -1,0 +1,34 @@
+{
+  "models": {
+    "intent_parser": {
+      "model": "HuggingFaceTB/SmolLM-135M",
+      "type": "causal_lm",
+      "max_length": 256,
+      "temperature": 0.1,
+      "few_shot_examples": 10
+    },
+    "error_recognizer": {
+      "model": "HuggingFaceTB/SmolLM-135M",
+      "type": "causal_lm",
+      "max_length": 256,
+      "temperature": 0.1,
+      "few_shot_examples": 8
+    },
+    "context_manager": {
+      "model": "sentence-transformers/all-MiniLM-L6-v2",
+      "type": "embedding",
+      "max_length": 512,
+      "similarity_threshold": 0.8
+    }
+  },
+  "routing": {
+    "timeout": 5.0,
+    "max_retries": 3,
+    "confidence_threshold": 0.7
+  },
+  "deployment": {
+    "device": "cpu",
+    "batch_size": 1,
+    "cache_size": 100
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "intent_parser": {
+    "examples": [
+      {
+        "input": "create a new file called test.py",
+        "output": "INTENT: file_create PARAM: test.py"
+      },
+      {
+        "input": "list all docker containers",
+        "output": "INTENT: docker_list"
+      },
+      {
+        "input": "delete the temp folder",
+        "output": "INTENT: file_delete PARAM: temp"
+      },
+      {
+        "input": "show me what's in config.yaml",
+        "output": "INTENT: file_read PARAM: config.yaml"
+      },
+      {
+        "input": "restart the web server",
+        "output": "INTENT: docker_restart PARAM: web"
+      }
+    ]
+  },
+  "error_recognizer": {
+    "examples": [
+      {
+        "input": "FileNotFoundError: [Errno 2] No such file or directory: 'data.csv'",
+        "output": "ERROR_TYPE: file_error SUGGESTION: Check if the file exists or create it first"
+      },
+      {
+        "input": "PermissionError: [Errno 13] Permission denied",
+        "output": "ERROR_TYPE: permission_error SUGGESTION: Check file permissions or run with appropriate privileges"
+      },
+      {
+        "input": "SyntaxError: invalid syntax",
+        "output": "ERROR_TYPE: syntax_error SUGGESTION: Check for missing colons, parentheses, or indentation"
+      }
+    ]
+  }
+}
