@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axolotl Training GUI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='img/axolotl_icon.svg') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="{{ url_for('static', filename='img/axolotl_icon.svg') }}" alt="Axolotl" class="app-logo">
+                    <h1>Axolotl Training Center</h1>
+                </div>
+                <div class="header-actions">
+                    <div class="system-status" id="systemStatus">
+                        <span class="status-indicator"></span>
+                        <span class="status-text">Checking...</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <nav class="nav-menu">
+                    <button class="nav-item active" data-tab="dashboard">
+                        <svg class="nav-icon" viewBox="0 0 24 24"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg>
+                        Dashboard
+                    </button>
+                    <button class="nav-item" data-tab="training">
+                        <svg class="nav-icon" viewBox="0 0 24 24"><path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/></svg>
+                        Training
+                    </button>
+                    <button class="nav-item" data-tab="configs">
+                        <svg class="nav-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        Configurations
+                    </button>
+                    <button class="nav-item" data-tab="models">
+                        <svg class="nav-icon" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
+                        Models
+                    </button>
+                    <button class="nav-item" data-tab="datasets">
+                        <svg class="nav-icon" viewBox="0 0 24 24"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 12.5v-9l6 4.5-6 4.5z"/></svg>
+                        Datasets
+                    </button>
+                </nav>
+            </aside>
+
+            <!-- Content Area -->
+            <main class="content-area">
+                <!-- Dashboard Tab -->
+                <div class="tab-content active" id="dashboard-tab">
+                    <div class="content-header">
+                        <h2>Dashboard</h2>
+                        <button class="btn btn-primary" id="quickTrainBtn">Quick Train</button>
+                    </div>
+                    
+                    <div class="dashboard-grid">
+                        <!-- System Info Card -->
+                        <div class="card">
+                            <h3 class="card-title">System Information</h3>
+                            <div id="systemInfo" class="system-info">
+                                <div class="info-row">
+                                    <span>CPU:</span>
+                                    <span id="cpuInfo">Loading...</span>
+                                </div>
+                                <div class="info-row">
+                                    <span>Memory:</span>
+                                    <span id="memInfo">Loading...</span>
+                                </div>
+                                <div class="info-row">
+                                    <span>GPU:</span>
+                                    <span id="gpuInfo">Loading...</span>
+                                </div>
+                                <div class="info-row">
+                                    <span>Python:</span>
+                                    <span id="pythonInfo">Loading...</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Active Trainings Card -->
+                        <div class="card">
+                            <h3 class="card-title">Active Trainings</h3>
+                            <div id="activeTrainings" class="training-list">
+                                <p class="no-data">No active trainings</p>
+                            </div>
+                        </div>
+
+                        <!-- Recent Models Card -->
+                        <div class="card">
+                            <h3 class="card-title">Recent Models</h3>
+                            <div id="recentModels" class="model-list">
+                                <p class="no-data">No models found</p>
+                            </div>
+                        </div>
+
+                        <!-- Quick Actions Card -->
+                        <div class="card">
+                            <h3 class="card-title">Quick Actions</h3>
+                            <div class="quick-actions">
+                                <button class="action-btn" onclick="createNewConfig()">
+                                    <svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+                                    New Config
+                                </button>
+                                <button class="action-btn" onclick="fetchExamples()">
+                                    <svg viewBox="0 0 24 24"><path d="M12 2l-5.5 9h11z M12 22l5.5-9h-11z"/></svg>
+                                    Fetch Examples
+                                </button>
+                                <button class="action-btn" onclick="openDocs()">
+                                    <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+                                    Documentation
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Training Tab -->
+                <div class="tab-content" id="training-tab">
+                    <div class="content-header">
+                        <h2>Training Management</h2>
+                        <button class="btn btn-primary" onclick="startNewTraining()">Start Training</button>
+                    </div>
+                    
+                    <div class="training-container">
+                        <!-- Training Configuration -->
+                        <div class="card">
+                            <h3 class="card-title">Training Configuration</h3>
+                            <div class="form-group">
+                                <label>Select Configuration:</label>
+                                <select id="configSelect" class="form-control">
+                                    <option value="">-- Select a config file --</option>
+                                </select>
+                                <button class="btn btn-secondary" onclick="reloadConfigs()">Reload</button>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Training Options:</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox">
+                                        <input type="checkbox" id="useAccelerate">
+                                        <span>Use Accelerate (Multi-GPU)</span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" id="useDeepspeed">
+                                        <span>Use DeepSpeed</span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="button-group">
+                                <button class="btn btn-primary" onclick="startTraining()">Start Training</button>
+                                <button class="btn btn-secondary" onclick="preprocessOnly()">Preprocess Only</button>
+                            </div>
+                        </div>
+
+                        <!-- Training Monitor -->
+                        <div class="card">
+                            <h3 class="card-title">Training Monitor</h3>
+                            <div id="trainingMonitor" class="monitor">
+                                <div class="monitor-header">
+                                    <select id="activeTrainingSelect" class="form-control">
+                                        <option value="">-- Select active training --</option>
+                                    </select>
+                                    <button class="btn btn-danger btn-sm" onclick="stopTraining()">Stop</button>
+                                </div>
+                                <div class="monitor-logs" id="trainingLogs">
+                                    <p class="no-data">Select a training to view logs</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Configurations Tab -->
+                <div class="tab-content" id="configs-tab">
+                    <div class="content-header">
+                        <h2>Configuration Manager</h2>
+                        <div class="header-actions">
+                            <button class="btn btn-primary" onclick="createNewConfig()">New Config</button>
+                            <button class="btn btn-secondary" onclick="importConfig()">Import</button>
+                        </div>
+                    </div>
+                    
+                    <div class="config-container">
+                        <!-- Config List -->
+                        <div class="config-sidebar">
+                            <h3>Available Configs</h3>
+                            <div id="configList" class="config-list">
+                                <p class="no-data">Loading configs...</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Config Editor -->
+                        <div class="config-editor">
+                            <div class="editor-header">
+                                <h3 id="configName">Select a configuration</h3>
+                                <div class="editor-actions">
+                                    <button class="btn btn-sm" onclick="saveConfig()">Save</button>
+                                    <button class="btn btn-sm" onclick="validateConfig()">Validate</button>
+                                    <button class="btn btn-sm btn-danger" onclick="deleteConfig()">Delete</button>
+                                </div>
+                            </div>
+                            <textarea id="configEditor" class="code-editor" placeholder="Configuration will appear here..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Models Tab -->
+                <div class="tab-content" id="models-tab">
+                    <div class="content-header">
+                        <h2>Trained Models</h2>
+                        <button class="btn btn-secondary" onclick="refreshModels()">Refresh</button>
+                    </div>
+                    
+                    <div class="models-grid" id="modelsGrid">
+                        <p class="no-data">Loading models...</p>
+                    </div>
+                </div>
+
+                <!-- Datasets Tab -->
+                <div class="tab-content" id="datasets-tab">
+                    <div class="content-header">
+                        <h2>Dataset Management</h2>
+                        <button class="btn btn-primary" onclick="addDataset()">Add Dataset</button>
+                    </div>
+                    
+                    <div class="datasets-container">
+                        <div class="card">
+                            <h3 class="card-title">Local Datasets</h3>
+                            <div id="localDatasets" class="dataset-list">
+                                <p class="no-data">Loading datasets...</p>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <h3 class="card-title">HuggingFace Datasets</h3>
+                            <div id="hfDatasets" class="dataset-list">
+                                <p class="no-data">Loading datasets...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div id="modalOverlay" class="modal-overlay" onclick="closeModal()"></div>
+    
+    <!-- Quick Train Modal -->
+    <div id="quickTrainModal" class="modal">
+        <div class="modal-content">
+            <h3>Quick Training Setup</h3>
+            <div class="form-group">
+                <label>Model Size:</label>
+                <select id="quickModelSize" class="form-control">
+                    <option value="1b">1B (Fast, Low Memory)</option>
+                    <option value="3b">3B (Balanced)</option>
+                    <option value="7b">7B (Better Quality)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Training Type:</label>
+                <select id="quickTrainType" class="form-control">
+                    <option value="lora">LoRA (Recommended)</option>
+                    <option value="qlora">QLoRA (Low Memory)</option>
+                    <option value="full">Full Fine-tuning</option>
+                </select>
+            </div>
+            <div class="modal-actions">
+                <button class="btn btn-primary" onclick="executeQuickTrain()">Start Training</button>
+                <button class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
