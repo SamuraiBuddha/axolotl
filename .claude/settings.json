@@ -1,0 +1,69 @@
+{
+  "mcpServers": {
+    "github-official": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "GITHUB_PERSONAL_ACCESS_TOKEN",
+        "ghcr.io/github/github-mcp-server"
+      ]
+    },
+    "time-precision": {
+      "command": "/home/samuraibuddha/Documents/GitHub/mcp-time-precision/.venv/bin/python",
+      "args": [
+        "-m",
+        "mcp_time_precision",
+        "--instance-id",
+        "Balthazar-002"
+      ]
+    },
+    "calculator": {
+      "command": "/home/samuraibuddha/Documents/GitHub/calculator-mcp-server/.venv/bin/python",
+      "args": [
+        "/home/samuraibuddha/Documents/GitHub/calculator-mcp-server/calculator_server.py",
+        "--stdio"
+      ]
+    },
+    "neo4j-cypher": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "--network=host",
+        "-e",
+        "NEO4J_URL=bolt://localhost:7687",
+        "-e",
+        "NEO4J_USERNAME=neo4j",
+        "-e",
+        "NEO4J_PASSWORD=your_password_here",
+        "mcp/neo4j-cypher"
+      ]
+    },
+    "neo4j-memory": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "--network=host",
+        "-e",
+        "NEO4J_URL=bolt://localhost:7687",
+        "-e",
+        "NEO4J_USERNAME=neo4j",
+        "-e",
+        "NEO4J_PASSWORD=your_password_here",
+        "mcp/neo4j-memory"
+      ]
+    },
+    "n8n-mcp": {
+      "uri": "n8n-mcp"
+    },
+    "atlas-docs": {
+      "uri": "@cartographai/atlas-docs-mcp"
+    }
+  }
+}
