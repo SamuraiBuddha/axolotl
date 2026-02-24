@@ -1,0 +1,72 @@
+# BCL Fine-tune: Qwen2.5-Coder-7B QLoRA on Linux + RTX A4000 (16GB)
+# Dataset: 10,104 Alpaca-format BCL training examples
+# Optimized for Linux with flash attention + sample packing
+
+base_model: Qwen/Qwen2.5-Coder-7B
+model_type: AutoModelForCausalLM
+tokenizer_type: AutoTokenizer
+trust_remote_code: true
+strict: false
+
+# Dataset - full 10K corpus
+datasets:
+  - path: ./bcl_training_data_full.jsonl
+    type: alpaca
+    ds_type: json
+val_set_size: 0.05
+output_dir: ./outputs/bcl_qwen_qlora
+dataset_prepared_path: ./prepared_bcl_full
+
+# QLoRA - 4-bit quantization to fit 7B in 16GB VRAM
+load_in_4bit: true
+adapter: qlora
+lora_r: 16
+lora_alpha: 32
+lora_dropout: 0.05
+lora_target_modules:
+  - q_proj
+  - k_proj
+  - v_proj
+  - o_proj
+  - up_proj
+  - down_proj
+
+# Sequence and packing - max input is 1095 tokens, 1280 saves VRAM
+sequence_len: 1280
+sample_packing: true
+eval_sample_packing: false
+pad_to_sequence_len: true
+
+# Training hyperparameters - batch_size=1 to fit in 16GB VRAM
+micro_batch_size: 1
+gradient_accumulation_steps: 8
+num_epochs: 3
+optimizer: adamw_torch_4bit
+lr_scheduler: cosine
+learning_rate: 2e-4
+warmup_steps: 50
+weight_decay: 0.01
+
+# Precision - A4000 is Ampere, supports bf16 + tf32
+bf16: true
+tf32: true
+
+# Memory optimization
+gradient_checkpointing: true
+gradient_checkpointing_kwargs:
+  use_reentrant: false
+flash_attention: true
+
+# Logging and saving
+logging_steps: 10
+evals_per_epoch: 4
+saves_per_epoch: 1
+save_total_limit: 3
+
+# Weights & Biases (disabled)
+wandb_project:
+wandb_name:
+wandb_mode: disabled
+
+# Reproducibility
+seed: 42
